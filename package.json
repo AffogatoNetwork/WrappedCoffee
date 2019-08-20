@@ -1,0 +1,22 @@
+{
+  "name": "wrapped_coffee_coin",
+  "version": "0.0.1",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test --network development"
+  },
+  "keywords": [
+    "affogato",
+    "blockchain",
+    "coffee"
+  ],
+  "author": "Affogato",
+  "license": "ISC",
+  "dependencies": {
+    "openzeppelin-solidity": "^2.3.0"
+  }
+}
