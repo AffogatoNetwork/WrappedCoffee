@@ -13,16 +13,23 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
     using SafeMath for uint256;
     using Address for address;
 
+    /// @notice An event emmited when tokens are burned in order to recover coffee from the cooperative.
+    event BurnSingle(address indexed _operator, address indexed _from, uint256 _id, uint256 _value);
+
+    /// @dev We need to make sure some of the functions are only called by cooperatives or farmers
+    IAffogato private affogato;
+
+    /// @notice The balances of the tokens
     // id => (owner => balance)
     mapping (uint256 => mapping(address => uint256)) internal balances;
 
+    /// @notice The permissions an owner has granted to a set of operators to manage their tokens
     // owner => (operator => approved)
     mapping (address => mapping(address => bool)) internal operatorApproval;
 
-    IAffogato private affogato;
-
     bytes4 constant private INTERFACE_SIGNATURE_URI = 0x0e89341c;
 
+    /// @dev The original creators of the token (Should contain only addresses that belong to cooperatives)
     // id => creators
     mapping (uint256 => address) public creators;
 
@@ -34,6 +41,7 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
     // id => farmer's address
     mapping (uint256 => address) public beneficiaries;
 
+    /// @notice The uris pointing to the JSON describing the token
     // id => URI
     mapping (uint256 => string) public uris;
 
@@ -93,12 +101,30 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
     }
 
     /**
-        @notice Approves a previously created token. The only user allowed to approve the token creation is the original coffe owner.
+        @notice Recieves an amount of tokens of a given type to be burned. A token that is burned becomes unusable and
+        it means the sender will receive coffee in return.
+        @dev The balance of the _from address must be equal or greater than the amount specified and the _id must belong to a previously created token (approved creation).
+        @param _id The id of the token to be burned.
+        @param _amount The amount of tokens to be burned.
+        @param _from The address from which the tokens will be burned
+     */
+    function burn(uint256 _id, uint256 _amount, address _from) external onlyIfTokenCreationApproved(_id) {
+        require(_amount > 0, "You can't burn 0 tokens");
+        require(msg.sender == _from || operatorApproval[_from][msg.sender] == true, "Need operator approval for 3rd party transfers.");
+
+        balances[_id][msg.sender] = balances[_id][msg.sender].sub(_amount);
+
+        emit BurnSingle(msg.sender, _from, _id, _amount);
+    }
+
+    /**
+        @notice Approves a previously created token to be used. The only user allowed to approve the token creation is the original coffe owner.
         @param _id The id of the token to be approved
      */
     function approveTokenCreation(uint256 _id) external beneficiaryOnly(_id) {
         require(!creationApprovals[_id], "Token is already approved");
         // Transfer event with mint semantic
+        creationApprovals[_id] = true;
         emit TransferSingle(msg.sender, address(0x0), msg.sender, _id, balances[_id][msg.sender]);
     }
 
