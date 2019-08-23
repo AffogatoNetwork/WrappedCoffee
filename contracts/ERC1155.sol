@@ -63,7 +63,7 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
     }
 
     modifier onlyIfTokenCreationApproved(uint256 _id) {
-        require(creationApprovals[_id], "Token yet to be approved");
+        require(creationApprovals[_id] == true, "Token yet to be approved");
         _;
     }
 
@@ -87,7 +87,9 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
     */
     function create(string calldata _uri, address _recipient, uint256 _initialSupply) external returns(uint256 _id) {
         require(affogato.isCooperative(msg.sender), "Only a cooperative can mint new tokens");
+        require(affogato.isFarmer(_recipient), "Recipient must be a farmer");
         require(_initialSupply > 0, "Cannot mint 0 tokens");
+        // require(_recipient != address(0x0), "_recipient cannot be address 0x0");
         _id = ++nonce;
         balances[_id][_recipient] = _initialSupply;
         beneficiaries[_id] = _recipient;
@@ -112,7 +114,7 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
         require(_amount > 0, "You can't burn 0 tokens");
         require(msg.sender == _from || operatorApproval[_from][msg.sender] == true, "Need operator approval for 3rd party transfers.");
 
-        balances[_id][msg.sender] = balances[_id][msg.sender].sub(_amount);
+        balances[_id][_from] = balances[_id][_from].sub(_amount);
 
         emit BurnSingle(msg.sender, _from, _id, _amount);
     }
