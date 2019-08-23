@@ -1,1 +1,2 @@
 # Wrapped Coffee
+Allows coffee farmers to trade in coffee batches for tokens to a cooperative. The main idea is to allow farmers to trade tokens for liquidity to continue processing the coffee and protecting the investors at the same time with the warranty from the cooperative.
