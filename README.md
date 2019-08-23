@@ -1,1 +1,1 @@
-# Wrapped Coffee Coin
+# Wrapped Coffee
