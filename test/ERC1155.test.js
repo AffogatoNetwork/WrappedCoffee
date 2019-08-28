@@ -169,4 +169,46 @@ contract("ERC1155", async (accounts) => {
             expect(balance.sub(new BN("10")).eq(balanceAfterBurn)).to.be.true;
         });
     });
+
+    describe("getTokensWithBalance", async () => {
+        let erc1155;
+        let affogato;
+
+        const initialSupplyAmount = 100;
+        const farmer = accounts[1];
+        const cooperative = accounts[2];
+        const notCooperative = accounts[3];
+        const notFarmer = accounts[4];
+
+
+        before(async () => {
+            affogato = await Affogato.new({ from: accounts[0] });
+            erc1155 = await ERC1155.new(affogato.address, { from: accounts[0] });
+
+            await affogato.setIsCooperative(notCooperative, false, { from: accounts[0] });
+            await affogato.setIsCooperative(cooperative, true, { from: accounts[0] });
+            await affogato.setIsFarmer(farmer, true, { from: accounts[0] });
+            await affogato.setIsFarmer(notFarmer, false, { from: accounts[0] });
+
+            await createNewTokenForFarmer();
+            await createNewTokenForFarmer();
+        });
+
+        createNewTokenForFarmer = async () => {
+            // Create the token with the farmer as beneficiary
+            await erc1155.create.sendTransaction("http://tokenjson.com/mytoken", farmer, initialSupplyAmount, { from: cooperative });
+            const tokenId = await erc1155.nonce.call({ from: accounts[0] });
+
+            // Approve the token
+            await erc1155.approveTokenCreation.sendTransaction(tokenId, { from: farmer });
+        }
+
+        it("should get the ids of the tokens", async () => {
+            const ids = await erc1155.getTokensWithBalance.call(farmer, { from: farmer });
+            // expect(ids).to.eql([new BN("1"), new BN("2")]);
+            expect(ids.length).to.be.eql(2);
+            expect(ids[0].eq(new BN("1"))).to.be.true;
+            expect(ids[1].eq(new BN("2"))).to.be.true;
+        });
+    });
 });

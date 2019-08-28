@@ -16,6 +16,7 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
     /// @notice An event emmited when tokens are burned in order to recover coffee from the cooperative.
     event BurnSingle(address indexed _operator, address indexed _from, uint256 _id, uint256 _value);
 
+    /// @notice The contract which can be queried to know the type of address
     /// @dev We need to make sure some of the functions are only called by cooperatives or farmers
     IAffogato private affogato;
 
@@ -134,6 +135,31 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
         require(bytes(_uri).length > 0, "Cannot use an empty URI for the token description");
         uris[_id] = _uri;
         emit URI(_uri, _id);
+    }
+
+    /**
+        @notice Returns an array containing all the ids of the tokens this address has a positive balance. 
+        This is intended to be used to show al the tokens available for this address at once without maintaining the ids stored somewhere else.
+        @dev Looking for better ways to do this, it can change in the future.
+        @param _address The address to get the tokens
+        @return An array containing the ids of the tokens
+     */
+    function getTokensWithBalance(address _address) external view returns(uint256[] memory) {
+        uint256[] memory allTokens = new uint256[](nonce);
+        uint256 tokenCount = 0;
+
+        for (uint256 i = 0; i <= nonce; i++) {
+            if (balances[i][_address] > 0 && creationApprovals[i]) {
+                allTokens[tokenCount++] = i;
+            }
+        }
+
+        uint256[] memory tokenIds = new uint256[](tokenCount);
+        for (uint i = 0; i < tokenCount; i++) {
+            tokenIds[i] = allTokens[i];
+        }
+
+        return tokenIds;
     }
 /////////////////////////////////////////// ERC165 //////////////////////////////////////////////
 
