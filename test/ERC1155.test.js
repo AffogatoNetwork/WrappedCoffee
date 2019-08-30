@@ -18,6 +18,7 @@ contract("ERC1155", async accounts => {
     let cooperative = accounts[2];
     let notCooperative = accounts[3];
     let notFarmer = accounts[4];
+    let ownerAddress = accounts[0];
 
     before(async () => {
       this.actorInstance = await ActorFactory.deployed();
@@ -37,6 +38,27 @@ contract("ERC1155", async accounts => {
       await this.actorInstance.addActor(web3.utils.utf8ToHex("CERTIFIER"), {
         from: notFarmer
       });
+    });
+
+    it("should set an owner", async () => {
+      var owner = await this.actorInstance.owner();
+      expect(owner).to.equal(ownerAddress);
+      await erc1155.setIActorAddress(this.actorInstance.address, {
+        from: ownerAddress
+      });
+      var response = await erc1155.getActorFactoryAddress();
+      expect(response).to.equal(this.actorInstance.address);
+
+      let isException = false;
+      try {
+        await erc1155.setIActorAddress(this.actorInstance.address, {
+          from: accounts[9]
+        });
+      } catch (err) {
+        isException = true;
+        assert(err.reason === "Ownable: caller is not the owner");
+      }
+      expect(isException).to.equal(true, "Should revert on not owner");
     });
 
     it("should not allow an address that doesn't belong to a cooperative to mint new tokens", async () => {

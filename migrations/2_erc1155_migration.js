@@ -8,5 +8,6 @@ module.exports = (deployer, network) => {
       .then(() => actorFactory.deployed())
       .then(() => deployer.deploy(erc1155, actorFactory.address));
   } else {
+    //TODO: set address of affogato core
   }
 };

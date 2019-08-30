@@ -19,7 +19,7 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants, Ownable
 
     /// @notice The contract which can be queried to know the type of address
     /// @dev We need to make sure some of the functions are only called by cooperatives or farmers
-    IActor private affogato;
+    IActor private actorFactory;
 
     /// @notice The balances of the tokens
     // id => (owner => balance)
@@ -51,7 +51,7 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants, Ownable
     uint256 public nonce;
 
     constructor(IActor _actorFactoryAddress)  public {
-        affogato = IActor(_actorFactoryAddress);
+        actorFactory = IActor(_actorFactoryAddress);
     }
 
     modifier creatorOnly(uint256 _id) {
@@ -81,6 +81,15 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants, Ownable
         _;
     }
 
+    /** @notice Sets the address of the ActorFactory
+      * @param _actorFactoryAddress address of the IActor
+      * @dev Only Owner can set the ActorFactory contract, it helps when the Actor Factory migrates
+      */
+
+    function setIActorAddress(IActor _actorFactoryAddress) public onlyOwner{
+        actorFactory = IActor(_actorFactoryAddress);
+    }
+
     /**
         @notice Creates the new token for the address in _recipient to approve it. The token cannot be used it until it's approved.
         @param _initialSupply The amount of tokens to mint for this new type
@@ -88,8 +97,8 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants, Ownable
         @return The id of the newly created token
     */
     function create(string calldata _uri, address _recipient, uint256 _initialSupply) external returns(uint256 _id) {
-        require(affogato.isCooperative(msg.sender), "Only a cooperative can mint new tokens");
-        require(affogato.isFarmer(_recipient), "Recipient must be a farmer");
+        require(actorFactory.isCooperative(msg.sender), "Only a cooperative can mint new tokens");
+        require(actorFactory.isFarmer(_recipient), "Recipient must be a farmer");
         require(_initialSupply > 0, "Cannot mint 0 tokens");
         // require(_recipient != address(0x0), "_recipient cannot be address 0x0");
         _id = ++nonce;
@@ -162,6 +171,10 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants, Ownable
 
         return tokenIds;
     }
+
+    function getActorFactoryAddress() public view returns(address){
+        return address(actorFactory);
+     }
 /////////////////////////////////////////// ERC165 //////////////////////////////////////////////
 
     /*
