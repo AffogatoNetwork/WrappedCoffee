@@ -1,6 +1,6 @@
 {
-  "name": "wrapped_coffee_coin",
-  "version": "0.0.1",
+  "name": "wrapped_coffee_token",
+  "version": "0.0.2",
   "description": "",
   "main": "truffle-config.js",
   "directories": {
@@ -19,7 +19,9 @@
   "dependencies": {
     "bn-chai": "^1.0.1",
     "bn.js": "^5.0.0",
+    "dotenv": "^8.1.0",
     "openzeppelin-solidity": "^2.3.0",
+    "truffle-hdwallet-provider": "^1.0.17",
     "truffle-test-utils": "^0.1.0"
   },
   "devDependencies": {
