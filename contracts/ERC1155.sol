@@ -1,14 +1,15 @@
 pragma solidity ^0.5.0;
 
 import "../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
+import "../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "./Address.sol";
 import "./Common.sol";
 import "./IERC1155TokenReceiver.sol";
 import "./IERC1155.sol";
-import "./IAffogato.sol";
+import "./IActor.sol";
 
 // A sample implementation of core ERC1155 function.
-contract ERC1155 is IERC1155, ERC165, CommonConstants
+contract ERC1155 is IERC1155, ERC165, CommonConstants, Ownable
 {
     using SafeMath for uint256;
     using Address for address;
@@ -18,7 +19,7 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
 
     /// @notice The contract which can be queried to know the type of address
     /// @dev We need to make sure some of the functions are only called by cooperatives or farmers
-    IAffogato private affogato;
+    IActor private affogato;
 
     /// @notice The balances of the tokens
     // id => (owner => balance)
@@ -49,8 +50,8 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
     // A nonce to ensure we have a unique id each time we mint.
     uint256 public nonce;
 
-    constructor(address _affogato)  public {
-        affogato = IAffogato(_affogato);
+    constructor(IActor _actorFactoryAddress)  public {
+        affogato = IActor(_actorFactoryAddress);
     }
 
     modifier creatorOnly(uint256 _id) {
@@ -138,7 +139,7 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
     }
 
     /**
-        @notice Returns an array containing all the ids of the tokens this address has a positive balance. 
+        @notice Returns an array containing all the ids of the tokens this address has a positive balance.
         This is intended to be used to show al the tokens available for this address at once without maintaining the ids stored somewhere else.
         @dev Looking for better ways to do this, it can change in the future.
         @param _address The address to get the tokens
@@ -210,7 +211,13 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
         @param _value   Transfer amount
         @param _data    Additional data with no specified format, MUST be sent unaltered in call to `onERC1155Received` on `_to`
     */
-    function safeTransferFrom(address _from, address _to, uint256 _id, uint256 _value, bytes calldata _data) external onlyIfTokenCreationApproved(_id) {
+    function safeTransferFrom(
+        address _from,
+        address _to,
+        uint256 _id,
+        uint256 _value,
+        bytes calldata _data
+    ) external onlyIfTokenCreationApproved(_id) {
 
         require(_to != address(0x0), "_to must be non-zero.");
         require(_from == msg.sender || operatorApproval[_from][msg.sender] == true, "Need operator approval for 3rd party transfers.");
@@ -218,7 +225,7 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
         // SafeMath will throw with insuficient funds _from
         // or if _id is not valid (balance will be 0)
         balances[_id][_from] = balances[_id][_from].sub(_value);
-        balances[_id][_to]   = _value.add(balances[_id][_to]);
+        balances[_id][_to] = _value.add(balances[_id][_to]);
 
         // MUST emit event
         emit TransferSingle(msg.sender, _from, _to, _id, _value);
@@ -264,7 +271,7 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
             // SafeMath will throw with insuficient funds _from
             // or if _id is not valid (balance will be 0)
             balances[_ids[i]][_from] = balances[_ids[i]][_from].sub(value);
-            balances[_ids[i]][_to]   = value.add(balances[_ids[i]][_to]);
+            balances[_ids[i]][_to] = value.add(balances[_ids[i]][_to]);
         }
 
         // Note: instead of the below batch versions of event and acceptance check you MAY have emitted a TransferSingle
@@ -302,16 +309,13 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
         @param _ids    ID of the Tokens
         @return        The _owner's balance of the Token types requested (i.e. balance for each (owner, id) pair)
      */
-    function balanceOfBatch(address[] calldata _owners, uint256[] calldata _ids) external view onlyIfTokensCreationApproved(_ids) returns (uint256[] memory) {
-
+    function balanceOfBatch(address[] calldata _owners, uint256[] calldata _ids)
+    external view onlyIfTokensCreationApproved(_ids) returns (uint256[] memory) {
         require(_owners.length == _ids.length, "The _ids array must match in length the array of owners");
-
         uint256[] memory balances_ = new uint256[](_owners.length);
-
         for (uint256 i = 0; i < _owners.length; ++i) {
             balances_[i] = balances[_ids[i]][_owners[i]];
         }
-
         return balances_;
     }
 
@@ -338,24 +342,45 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants
 
 /////////////////////////////////////////// Internal //////////////////////////////////////////////
 
-    function _doSafeTransferAcceptanceCheck(address _operator, address _from, address _to, uint256 _id, uint256 _value, bytes memory _data) internal {
-
+    function _doSafeTransferAcceptanceCheck(
+        address _operator,
+        address _from,
+        address _to,
+        uint256 _id,
+        uint256 _value,
+        bytes memory _data
+    ) internal {
         // If this was a hybrid standards solution you would have to check ERC165(_to).supportsInterface(0x4e2312e0) here but as this is a pure implementation of an ERC-1155 token set as recommended by
         // the standard, it is not necessary. The below should revert in all failure cases i.e. _to isn't a receiver, or it is and either returns an unknown value or it reverts in the call to indicate non-acceptance.
-
-
         // Note: if the below reverts in the onERC1155Received function of the _to address you will have an undefined revert reason returned rather than the one in the require test.
         // If you want predictable revert reasons consider using low level _to.call() style instead so the revert does not bubble up and you can revert yourself on the ERC1155_ACCEPTED test.
-        require(ERC1155TokenReceiver(_to).onERC1155Received(_operator, _from, _id, _value, _data) == ERC1155_ACCEPTED, "contract returned an unknown value from onERC1155Received");
+        require(ERC1155TokenReceiver(_to).onERC1155Received(
+            _operator,
+            _from,
+            _id,
+            _value,
+            _data
+        ) == ERC1155_ACCEPTED, "contract returned an unknown value from onERC1155Received");
     }
 
-    function _doSafeBatchTransferAcceptanceCheck(address _operator, address _from, address _to, uint256[] memory _ids, uint256[] memory _values, bytes memory _data) internal {
-
+    function _doSafeBatchTransferAcceptanceCheck(
+        address _operator,
+        address _from,
+        address _to,
+        uint256[] memory _ids,
+        uint256[] memory _values,
+        bytes memory _data
+    ) internal {
         // If this was a hybrid standards solution you would have to check ERC165(_to).supportsInterface(0x4e2312e0) here but as this is a pure implementation of an ERC-1155 token set as recommended by
         // the standard, it is not necessary. The below should revert in all failure cases i.e. _to isn't a receiver, or it is and either returns an unknown value or it reverts in the call to indicate non-acceptance.
-
         // Note: if the below reverts in the onERC1155BatchReceived function of the _to address you will have an undefined revert reason returned rather than the one in the require test.
         // If you want predictable revert reasons consider using low level _to.call() style instead so the revert does not bubble up and you can revert yourself on the ERC1155_BATCH_ACCEPTED test.
-        require(ERC1155TokenReceiver(_to).onERC1155BatchReceived(_operator, _from, _ids, _values, _data) == ERC1155_BATCH_ACCEPTED, "contract returned an unknown value from onERC1155BatchReceived");
+        require(ERC1155TokenReceiver(_to).onERC1155BatchReceived(
+            _operator,
+            _from,
+            _ids,
+            _values,
+            _data
+        ) == ERC1155_BATCH_ACCEPTED, "contract returned an unknown value from onERC1155BatchReceived");
     }
 }
