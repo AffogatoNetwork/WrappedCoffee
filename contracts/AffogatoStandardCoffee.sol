@@ -1,10 +1,9 @@
 pragma solidity ^0.5.9;
 
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
-import "openzeppelin-solidity/contracts/token/ERC20/ERC20Mintable.sol";
-import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 
-contract AffogatoStandardCoffee is ERC20Mintable, ERC20Detailed, Ownable {
+contract AffogatoStandardCoffee is ERC20, ERC20Detailed {
 
     address public CoffeeTokenHolderAddress;
 
@@ -13,7 +12,7 @@ contract AffogatoStandardCoffee is ERC20Mintable, ERC20Detailed, Ownable {
         _;
     }
 
-    constructor(address _CoffeeTokenHolderAddress) Ownable() ERC20Detailed("Affogato Standard Coffee", "ASC", 0) public {
+    constructor(address _CoffeeTokenHolderAddress)  ERC20Detailed("Affogato Standard Coffee", "ASC", 0) public {
         CoffeeTokenHolderAddress = _CoffeeTokenHolderAddress;
     }
 

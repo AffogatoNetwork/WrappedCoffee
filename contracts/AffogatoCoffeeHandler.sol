@@ -1,13 +1,11 @@
 pragma solidity ^0.5.9;
 
-import './AffogatoStandardToken.sol';
-import 'openzeppelin-solidity/contracts/token/ERC721/ERC721Holder.sol';
-import 'openzeppelin-solidity/contracts/token/ERC20/IERC20.sol';
+import 'openzeppelin-solidity/contracts/ownership/Ownable.sol';
 import './interfaces/IActor.sol';
 import "./interfaces/IERC1155.sol";
 import "./interfaces/IAffogatoToken.sol";
 
-contract AffogatoCoffeeHandler is Ownable, ERC721Holder{
+contract AffogatoCoffeeHandler is Ownable{
 
     IAffogatoToken public affogatoStandardToken;
     IERC1155 public wrappedCoffeeToken;
@@ -24,15 +22,18 @@ contract AffogatoCoffeeHandler is Ownable, ERC721Holder{
         affogatoStandardToken = _standardTokenContract;
     }
 
-    function wrapCoffee(address _from, uint256 _tokenId, uint _amount) external{
-       wrappedCoffeeToken.safeTransferFrom(_from, address(this), _tokenId, _amount, "");
-       affogatoStandardToken.wrapCoffee(_from, _amount);
+    function wrapCoffee(uint256 _tokenId, uint _amount) external{
+       wrappedCoffeeToken.safeTransferFrom(msg.sender, address(this), _tokenId, _amount, "");
+       affogatoStandardToken.wrapCoffee(msg.sender, _amount);
     }
 
-    function unwrapCoffee(address _from, uint256 _tokenId, uint256 _amount) external{
-       affogatoStandardToken.unwrapCoffee(_from, _amount);
-       affogatoStandardToken.transferFrom(_from, address(this), _amount);
-       wrappedCoffeeToken.safeTransferFrom(address(this),_from, _tokenId, _amount, "");
-       affogatoStandardToken.unwrapCoffee(_from, _amount);
+    function unwrapCoffee(uint256 _tokenId, uint256 _amount) external{
+       affogatoStandardToken.transferFrom(msg.sender, address(this), _amount);
+       wrappedCoffeeToken.safeTransferFrom(address(this),msg.sender, _tokenId, _amount, "");
+       affogatoStandardToken.unwrapCoffee(msg.sender, _amount);
+    }
+
+    function onERC1155Received(address, address, uint256, uint256, bytes memory) public pure returns (bytes4) {
+        return this.onERC1155Received.selector;
     }
 }
