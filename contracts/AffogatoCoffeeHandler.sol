@@ -3,14 +3,13 @@ pragma solidity ^0.5.9;
 import './AffogatoStandardToken.sol';
 import 'openzeppelin-solidity/contracts/token/ERC721/ERC721Holder.sol';
 import 'openzeppelin-solidity/contracts/token/ERC20/IERC20.sol';
-import './IActor.sol';
-import "./IERC1155.sol";
+import './interfaces/IActor.sol';
+import "./interfaces/IERC1155.sol";
+import "./interfaces/IAffogatoToken.sol";
 
 contract AffogatoCoffeeHandler is Ownable, ERC721Holder{
 
-    IERC20 public AffogatoStandardToken;
-    mapping (uint256 => uint256) public coffeeBatches;
-    mapping(address => bool) public isCooperative;
+    IAffogatoToken public affogatoStandardToken;
     IERC1155 public wrappedCoffeeToken;
 
     constructor(IERC1155 _wrappedCoffeeToken) Ownable() public{
@@ -21,21 +20,19 @@ contract AffogatoCoffeeHandler is Ownable, ERC721Holder{
         wrappedCoffeeToken = _wrappedCoffeeToken;
     }
     //First action, set address of contract
-    function setERC20TokenContract(IERC20 _ERC20TokenContract) public onlyOwner {
-        ERC20TokenContract = _ERC20TokenContract;
+    function setStandardTokenContract(IAffogatoToken _standardTokenContract) public onlyOwner {
+        affogatoStandardToken = _standardTokenContract;
     }
 
-    function wrapCoffee(address _from, uint256 _tokenId) public{
-       wrappedCoffeeToken.transferFrom(_from, address(this), _tokenId);
-       uint256 size = wrappedCoffeeToken.coffeeBatchSize(_tokenId);
-       AffogatoStandardToken(ERC20TokenContract).wrapCoffee(_from, size);
+    function wrapCoffee(address _from, uint256 _tokenId, uint _amount) external{
+       wrappedCoffeeToken.safeTransferFrom(_from, address(this), _tokenId, _amount, "");
+       affogatoStandardToken.wrapCoffee(_from, _amount);
     }
 
-    function unwrapCoffee(address _from, uint256 _tokenId, uint256 _amount) public{
-       uint256 size = CoffeeBatchNFT(NFTTokenContractAddress).coffeeBatchSize(_tokenId);
-       require(size == _amount, "burned tokens must equal to the coffee wanted");
-       WrappedCoffeeCoin(ERC20TokenContract).transferFrom(_from, address(this), _amount);
-       CoffeeBatchNFT(NFTTokenContractAddress).transferFrom(address(this),_from, _tokenId);
-       WrappedCoffeeCoin(ERC20TokenContract).unwrapCoffee(_from, _amount);
+    function unwrapCoffee(address _from, uint256 _tokenId, uint256 _amount) external{
+       affogatoStandardToken.unwrapCoffee(_from, _amount);
+       affogatoStandardToken.transferFrom(_from, address(this), _amount);
+       wrappedCoffeeToken.safeTransferFrom(address(this),_from, _tokenId, _amount, "");
+       affogatoStandardToken.unwrapCoffee(_from, _amount);
     }
 }

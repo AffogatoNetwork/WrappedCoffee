@@ -7,7 +7,7 @@ pragma solidity ^0.5.9;
 import 'openzeppelin-solidity/contracts/lifecycle/Pausable.sol';
 import 'openzeppelin-solidity/contracts/ownership/Ownable.sol';
 import "openzeppelin-solidity/contracts/access/Roles.sol";
-import "./IActor.sol";
+import "./interfaces/IActor.sol";
 
 contract ActorFactory is Ownable, Pausable, IActor {
 
