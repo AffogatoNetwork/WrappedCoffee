@@ -1,0 +1,279 @@
+{
+  "contractName": "CommonConstants",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.9+commit.e560f70d\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{},\"notice\":\"Note: Simple contract to use as base for const vals\"}},\"settings\":{\"compilationTarget\":{\"/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/Common.sol\":\"CommonConstants\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/Common.sol\":{\"keccak256\":\"0x900d50cdfedbcf60e9e1ef727674ead98b35abf5a01714ed285989d410c01db8\",\"urls\":[\"bzzr://c6231f2dec468ce98e3dcc71c22bceef1ef865ce38bbdb585e927a00de2dafd2\",\"dweb:/ipfs/QmRHVoDnjh7ihKZJCXbsVwMEodGEtKBE1wJcvxqkqec2R2\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72305820835f222c80ef3b0ddcf0078b227f1b5c2ba7852f64176892809e7eb575aaff9764736f6c63430005090032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72305820835f222c80ef3b0ddcf0078b227f1b5c2ba7852f64176892809e7eb575aaff9764736f6c63430005090032",
+  "sourceMap": "88:326:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;88:326:2;;;;;;;",
+  "deployedSourceMap": "88:326:2:-;;;;;",
+  "source": "pragma solidity ^0.5.0;\n\n/**\n    Note: Simple contract to use as base for const vals\n*/\ncontract CommonConstants {\n\n    bytes4 constant internal ERC1155_ACCEPTED = 0xf23a6e61; // bytes4(keccak256(\"onERC1155Received(address,address,uint256,uint256,bytes)\"))\n    bytes4 constant internal ERC1155_BATCH_ACCEPTED = 0xbc197c81; // bytes4(keccak256(\"onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)\"))\n}\n",
+  "sourcePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/Common.sol",
+  "ast": {
+    "absolutePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/Common.sol",
+    "exportedSymbols": {
+      "CommonConstants": [
+        932
+      ]
+    },
+    "id": 933,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 925,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "Note: Simple contract to use as base for const vals",
+        "fullyImplemented": true,
+        "id": 932,
+        "linearizedBaseContracts": [
+          932
+        ],
+        "name": "CommonConstants",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 928,
+            "name": "ERC1155_ACCEPTED",
+            "nodeType": "VariableDeclaration",
+            "scope": 932,
+            "src": "120:54:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 926,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "120:6:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30786632336136653631",
+              "id": 927,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "164:10:2",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_4063915617_by_1",
+                "typeString": "int_const 4063915617"
+              },
+              "value": "0xf23a6e61"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 931,
+            "name": "ERC1155_BATCH_ACCEPTED",
+            "nodeType": "VariableDeclaration",
+            "scope": 932,
+            "src": "261:60:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 929,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "261:6:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30786263313937633831",
+              "id": 930,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "311:10:2",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_3155786881_by_1",
+                "typeString": "int_const 3155786881"
+              },
+              "value": "0xbc197c81"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 933,
+        "src": "88:326:2"
+      }
+    ],
+    "src": "0:415:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/Common.sol",
+    "exportedSymbols": {
+      "CommonConstants": [
+        932
+      ]
+    },
+    "id": 933,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 925,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "Note: Simple contract to use as base for const vals",
+        "fullyImplemented": true,
+        "id": 932,
+        "linearizedBaseContracts": [
+          932
+        ],
+        "name": "CommonConstants",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 928,
+            "name": "ERC1155_ACCEPTED",
+            "nodeType": "VariableDeclaration",
+            "scope": 932,
+            "src": "120:54:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 926,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "120:6:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30786632336136653631",
+              "id": 927,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "164:10:2",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_4063915617_by_1",
+                "typeString": "int_const 4063915617"
+              },
+              "value": "0xf23a6e61"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 931,
+            "name": "ERC1155_BATCH_ACCEPTED",
+            "nodeType": "VariableDeclaration",
+            "scope": 932,
+            "src": "261:60:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 929,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "261:6:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30786263313937633831",
+              "id": 930,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "311:10:2",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_3155786881_by_1",
+                "typeString": "int_const 3155786881"
+              },
+              "value": "0xbc197c81"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 933,
+        "src": "88:326:2"
+      }
+    ],
+    "src": "0:415:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.9+commit.e560f70d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2019-08-31T17:16:39.203Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Note: Simple contract to use as base for const vals"
+  }
+}
