@@ -5,15 +5,15 @@ import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 
 contract AffogatoStandardCoffee is ERC20, ERC20Detailed {
 
-    address public CoffeeTokenHolderAddress;
+    address public CoffeeHandlerAddress;
 
     modifier onlyCoffeeHolder(){
-        require(msg.sender == CoffeeTokenHolderAddress, "caller must be holder contract");
+        require(msg.sender == CoffeeHandlerAddress, "caller must be holder contract");
         _;
     }
 
-    constructor(address _CoffeeTokenHolderAddress)  ERC20Detailed("Affogato Standard Coffee", "ASC", 0) public {
-        CoffeeTokenHolderAddress = _CoffeeTokenHolderAddress;
+    constructor(address _CoffeeHandlerAddress)  ERC20Detailed("Affogato Standard Coffee", "ASC", 0) public {
+        CoffeeHandlerAddress = _CoffeeHandlerAddress;
     }
 
     function wrapCoffee(address _owner, uint _amount) public onlyCoffeeHolder {
