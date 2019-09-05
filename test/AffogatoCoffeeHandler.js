@@ -28,6 +28,9 @@ contract(AffogatoStandardCoffee, function(accounts) {
       await this.actorInstance.addActor(web3.utils.utf8ToHex("FARMER"), {
         from: accounts[1]
       });
+      await this.actorInstance.addActor(web3.utils.utf8ToHex("FARMER"), {
+        from: accounts[3]
+      });
       await this.nftInstance.create("", accounts[1], 100, {
         from: accounts[2]
       });
@@ -45,6 +48,24 @@ contract(AffogatoStandardCoffee, function(accounts) {
         this.handlerInstance.address,
         100,
         { from: accounts[1] }
+      );
+      await this.nftInstance.create("", accounts[3], 100, {
+        from: accounts[2]
+      });
+      await this.nftInstance.approveTokenCreation(2, {
+        from: accounts[3]
+      });
+      await this.nftInstance.setApprovalForAll(
+        this.handlerInstance.address,
+        true,
+        {
+          from: accounts[3]
+        }
+      );
+      await this.standardCoffeeInstance.approve(
+        this.handlerInstance.address,
+        100,
+        { from: accounts[3] }
       );
     });
 
@@ -147,6 +168,8 @@ contract(AffogatoStandardCoffee, function(accounts) {
       userStandardBalance
         .toNumber()
         .should.be.equal(100, "new balance should be 100");
+      let userLoan = await this.handlerInstance.getTokenLoan(1, accounts[1]);
+      userLoan.toNumber().should.equal(100, "loan should be same as deposit");
     });
 
     it("...should unwrap coffee", async () => {
@@ -155,8 +178,8 @@ contract(AffogatoStandardCoffee, function(accounts) {
       });
       receipt.logs.length.should.be.equal(1, "trigger one event");
       receipt.logs[0].event.should.be.equal(
-        "LogUnWrapCoffee",
-        "should be the LogUnWrapCoffee event"
+        "LogUnwrapCoffee",
+        "should be the LogUnwrapCoffee event"
       );
       expect(receipt.logs[0].args._tokenId.toNumber()).to.be.equal(
         1,
@@ -185,11 +208,14 @@ contract(AffogatoStandardCoffee, function(accounts) {
       userStandardBalance
         .toNumber()
         .should.be.equal(90, "new balance should be 90");
-
+      // Access test
+      await this.handlerInstance.wrapCoffee(2, 10, {
+        from: accounts[3]
+      });
       isException = false;
       try {
         await this.handlerInstance.unwrapCoffee(1, 10, {
-          from: accounts[2]
+          from: accounts[3]
         });
       } catch (err) {
         isException = true;
