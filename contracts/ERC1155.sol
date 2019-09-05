@@ -4,9 +4,9 @@ import "../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
 import "../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "./Address.sol";
 import "./Common.sol";
-import "./IERC1155TokenReceiver.sol";
-import "./IERC1155.sol";
-import "./IActor.sol";
+import "./interfaces/IERC1155TokenReceiver.sol";
+import "./interfaces/IERC1155.sol";
+import "./interfaces/IActor.sol";
 
 // A sample implementation of core ERC1155 function.
 contract ERC1155 is IERC1155, ERC165, CommonConstants, Ownable
