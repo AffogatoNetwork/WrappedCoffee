@@ -5,14 +5,16 @@ import getWeb3 from "./utils/getWeb3";
 
 // Contracts
 import ERC1155 from "./contracts/ERC1155.json";
+import AffogatoTokenHandler from "./contracts/AffogatoCoffeeHandler.json";
+import AffogatoStandardToken from "./contracts/AffogatoStandardCoffee.json";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    const { web3, contract, accounts } = props;
+    const { web3, erc1155Contract, accounts } = props;
     this.state = {
       web3,
-      contract,
+      erc1155Contract,
       accounts
     };
   }
@@ -24,8 +26,18 @@ class App extends React.Component {
       const networkId = await web3.eth.net.getId();
 
       const deployedNetwork = ERC1155.networks[networkId];
-      const contract = new web3.eth.Contract(
+      const erc1155Contract = new web3.eth.Contract(
         ERC1155.abi,
+        deployedNetwork && deployedNetwork.address
+      );
+
+      const affogatoTokenHandler = new web3.eth.Contract(
+        AffogatoTokenHandler.abi,
+        deployedNetwork && deployedNetwork.address
+      );
+
+      const standardToken = new web3.eth.Contract(
+        AffogatoStandardToken.abi,
         deployedNetwork && deployedNetwork.address
       );
 
@@ -38,20 +50,22 @@ class App extends React.Component {
       context.setState({
         web3,
         accounts,
-        contract,
+        erc1155Contract,
+        affogatoTokenHandler,
+        standardToken
       })
     } catch (e) {
-      alert("Failed to load web3, accounts or contract. Check console for details.");
+      alert("Failed to load web3, accounts or erc1155Contract. Check console for details.");
       console.error(e);
     }
   }
 
   render() {
-    const { web3, accounts, contract } = this.state;
+    const { web3, accounts, erc1155Contract, affogatoTokenHandler, standardToken } = this.state;
     if (!web3) {
       return <a>Loading...</a>
     }
-    return <TokensDashboard web3={web3} contract={contract} accounts={accounts} />
+    return <TokensDashboard standardToken={standardToken} web3={web3} erc1155Contract={erc1155Contract} accounts={accounts} affogatoTokenHandler={affogatoTokenHandler} />
   }
 }
 

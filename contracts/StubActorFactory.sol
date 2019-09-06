@@ -1,6 +1,6 @@
 pragma solidity ^0.5.9;
 
-import "./IActor.sol";
+import "./interfaces/IActor.sol";
 
 contract StubActorFactory is IActor {
     /** @notice Gets the type of the account.

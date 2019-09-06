@@ -451,25 +451,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.9+commit.e560f70d\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_accountAddress\",\"type\":\"address\"}],\"name\":\"isTechnician\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_accountAddress\",\"type\":\"address\"}],\"name\":\"isBenefit\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_accountAddress\",\"type\":\"address\"}],\"name\":\"isCertifier\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getSenderRole\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_allowed\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"bool\"}],\"name\":\"approve\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_actorAddress\",\"type\":\"address\"}],\"name\":\"actorExists\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_actorAddress\",\"type\":\"address\"}],\"name\":\"cooperativeDestroyActor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_accountAddress\",\"type\":\"address\"}],\"name\":\"isTaster\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"destroyActor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_role\",\"type\":\"bytes32\"}],\"name\":\"addActor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_allower\",\"type\":\"address\"},{\"name\":\"_allowed\",\"type\":\"address\"}],\"name\":\"isAllowed\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_cooperative\",\"type\":\"address\"}],\"name\":\"isCooperative\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"getAccountType\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_farmer\",\"type\":\"address\"}],\"name\":\"isFarmer\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_role\",\"type\":\"bytes32\"},{\"name\":\"_actorAddress\",\"type\":\"address\"}],\"name\":\"cooperativeAddActor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_accountAddress\",\"type\":\"address\"}],\"name\":\"isRoaster\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_allower\",\"type\":\"address\"},{\"name\":\"_allowed\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"bool\"}],\"name\":\"cooperativeApprove\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_accountAddress\",\"type\":\"address\"}],\"name\":\"isValidator\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_actorAddress\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_role\",\"type\":\"bytes32\"}],\"name\":\"LogAddActor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_cooperativeAddress\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_actorAddress\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_role\",\"type\":\"bytes32\"}],\"name\":\"LogCooperativeAddActor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_actorAddress\",\"type\":\"address\"}],\"name\":\"LogDestroyActor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_cooperativeAddress\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_actorAddress\",\"type\":\"address\"}],\"name\":\"LogCooperativeDestroyActor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_owner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"_allowed\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_value\",\"type\":\"bool\"}],\"name\":\"LogApproval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_owner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"_allowed\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_value\",\"type\":\"bool\"},{\"indexed\":false,\"name\":\"_cooperativeAddress\",\"type\":\"address\"}],\"name\":\"LogCooperativeApproval\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"actorExists(address)\":{\"params\":{\"_actorAddress\":\"address of actor to check\"},\"return\":\"true if is exists false if not\"},\"addActor(bytes32)\":{\"params\":{\"_role\":\"type of account of the actor.\"}},\"approve(address,bool)\":{\"params\":{\"_allowed\":\"address of actor to assign the permission.\",\"_value\":\"value to be set.\"},\"return\":\"true if is success\"},\"cooperativeAddActor(bytes32,address)\":{\"details\":\"Only Cooperatives can call this method\",\"params\":{\"_actorAddress\":\"address of the actor.\",\"_role\":\"type of account of the actor.\"}},\"cooperativeApprove(address,address,bool)\":{\"details\":\"Only Cooperatives can call this method\",\"params\":{\"_allowed\":\"address of actor to assign the permission.\",\"_allower\":\"address of actor to giving the permission.\",\"_value\":\"value to be set.\"},\"return\":\"true if is success\"},\"cooperativeDestroyActor(address)\":{\"details\":\"Only Cooperatives can call this methodonly actor can destroy account\",\"params\":{\"_actorAddress\":\"address of the actor.\"}},\"destroyActor()\":{\"details\":\"only actor can destroy account\"},\"getAccountType(address)\":{\"params\":{\"_owner\":\"address of the owner.\"},\"return\":\"returns a bytes32 with the type of account or empty if there is no account\"},\"getSenderRole()\":{\"return\":\"returns a bytes32 with the type of account or empty if there is no account\"},\"isAllowed(address,address)\":{\"params\":{\"_allowed\":\"address of the actor to check if has permission.\",\"_allower\":\"address of the allower.\"},\"return\":\"returns true if _allowed has permission, false otherwise.\"},\"isBenefit(address)\":{\"params\":{\"_accountAddress\":\"address of account to check\"},\"return\":\"true if is exists false if not\"},\"isCertifier(address)\":{\"params\":{\"_accountAddress\":\"address of account to check\"},\"return\":\"true if is exists false if not\"},\"isCooperative(address)\":{\"params\":{\"_cooperative\":\"The address to be checked\"},\"return\":\"true if the address passed to the function belongs to a cooperative false otherwise\"},\"isFarmer(address)\":{\"params\":{\"_farmer\":\"The address to be checked\"},\"return\":\"true if the address passed to the function belongs to a farmer false otherwise\"},\"isRoaster(address)\":{\"params\":{\"_accountAddress\":\"address of account to check\"},\"return\":\"true if is exists false if not\"},\"isTaster(address)\":{\"params\":{\"_accountAddress\":\"address of account to check\"},\"return\":\"true if is exists false if not\"},\"isTechnician(address)\":{\"params\":{\"_accountAddress\":\"address of account to check\"},\"return\":\"true if is exists false if not\"},\"isValidator(address)\":{\"params\":{\"_accountAddress\":\"address of account to check\"},\"return\":\"true if is exists false if not\"}}},\"userdoc\":{\"methods\":{\"actorExists(address)\":{\"notice\":\"checks if an actor exists\"},\"addActor(bytes32)\":{\"notice\":\"creates a new actor from sender\"},\"approve(address,bool)\":{\"notice\":\"approves actor\"},\"cooperativeAddActor(bytes32,address)\":{\"notice\":\"Cooperative creates new actor\"},\"cooperativeApprove(address,address,bool)\":{\"notice\":\"approves actor from cooperative\"},\"cooperativeDestroyActor(address)\":{\"notice\":\"destroys an actor\"},\"destroyActor()\":{\"notice\":\"destroys an actor\"},\"getAccountType(address)\":{\"notice\":\"Gets the type of the account.\"},\"getSenderRole()\":{\"notice\":\"Gets the type of the sender account.\"},\"isAllowed(address,address)\":{\"notice\":\"Checks if a user has permission from another user.\"},\"isBenefit(address)\":{\"notice\":\"checks if account is a benefit\"},\"isCertifier(address)\":{\"notice\":\"checks if account is a certifier\"},\"isCooperative(address)\":{\"notice\":\"Returns true if the address passed to it belongs to a cooperative account\"},\"isFarmer(address)\":{\"notice\":\"Returns true if the address passed to it belongs to a farmer account\"},\"isRoaster(address)\":{\"notice\":\"checks if account is a roaster\"},\"isTaster(address)\":{\"notice\":\"checks if account is a taster\"},\"isTechnician(address)\":{\"notice\":\"checks if account is a technician\"},\"isValidator(address)\":{\"notice\":\"checks if account is a validator\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/IActor.sol\":\"IActor\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/IActor.sol\":{\"keccak256\":\"0x93adf2cec70c095f7f853e7d494e77c49350c9909eacdd75a6c76a17a0160704\",\"urls\":[\"bzzr://1abe3fe8fcd7805cd2d8f70166685523f43e0fc49d998b2d1fa4834925578dff\",\"dweb:/ipfs/QmXh9uRXQHN1F9wpbGeEyztZMWvBW5AF95yuDCE8LhgCJG\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.9+commit.e560f70d\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_accountAddress\",\"type\":\"address\"}],\"name\":\"isTechnician\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_accountAddress\",\"type\":\"address\"}],\"name\":\"isBenefit\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_accountAddress\",\"type\":\"address\"}],\"name\":\"isCertifier\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getSenderRole\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_allowed\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"bool\"}],\"name\":\"approve\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_actorAddress\",\"type\":\"address\"}],\"name\":\"actorExists\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_actorAddress\",\"type\":\"address\"}],\"name\":\"cooperativeDestroyActor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_accountAddress\",\"type\":\"address\"}],\"name\":\"isTaster\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"destroyActor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_role\",\"type\":\"bytes32\"}],\"name\":\"addActor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_allower\",\"type\":\"address\"},{\"name\":\"_allowed\",\"type\":\"address\"}],\"name\":\"isAllowed\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_cooperative\",\"type\":\"address\"}],\"name\":\"isCooperative\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"getAccountType\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_farmer\",\"type\":\"address\"}],\"name\":\"isFarmer\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_role\",\"type\":\"bytes32\"},{\"name\":\"_actorAddress\",\"type\":\"address\"}],\"name\":\"cooperativeAddActor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_accountAddress\",\"type\":\"address\"}],\"name\":\"isRoaster\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_allower\",\"type\":\"address\"},{\"name\":\"_allowed\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"bool\"}],\"name\":\"cooperativeApprove\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_accountAddress\",\"type\":\"address\"}],\"name\":\"isValidator\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_actorAddress\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_role\",\"type\":\"bytes32\"}],\"name\":\"LogAddActor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_cooperativeAddress\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_actorAddress\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_role\",\"type\":\"bytes32\"}],\"name\":\"LogCooperativeAddActor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_actorAddress\",\"type\":\"address\"}],\"name\":\"LogDestroyActor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_cooperativeAddress\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_actorAddress\",\"type\":\"address\"}],\"name\":\"LogCooperativeDestroyActor\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_owner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"_allowed\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_value\",\"type\":\"bool\"}],\"name\":\"LogApproval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_owner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"_allowed\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_value\",\"type\":\"bool\"},{\"indexed\":false,\"name\":\"_cooperativeAddress\",\"type\":\"address\"}],\"name\":\"LogCooperativeApproval\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"actorExists(address)\":{\"params\":{\"_actorAddress\":\"address of actor to check\"},\"return\":\"true if is exists false if not\"},\"addActor(bytes32)\":{\"params\":{\"_role\":\"type of account of the actor.\"}},\"approve(address,bool)\":{\"params\":{\"_allowed\":\"address of actor to assign the permission.\",\"_value\":\"value to be set.\"},\"return\":\"true if is success\"},\"cooperativeAddActor(bytes32,address)\":{\"details\":\"Only Cooperatives can call this method\",\"params\":{\"_actorAddress\":\"address of the actor.\",\"_role\":\"type of account of the actor.\"}},\"cooperativeApprove(address,address,bool)\":{\"details\":\"Only Cooperatives can call this method\",\"params\":{\"_allowed\":\"address of actor to assign the permission.\",\"_allower\":\"address of actor to giving the permission.\",\"_value\":\"value to be set.\"},\"return\":\"true if is success\"},\"cooperativeDestroyActor(address)\":{\"details\":\"Only Cooperatives can call this methodonly actor can destroy account\",\"params\":{\"_actorAddress\":\"address of the actor.\"}},\"destroyActor()\":{\"details\":\"only actor can destroy account\"},\"getAccountType(address)\":{\"params\":{\"_owner\":\"address of the owner.\"},\"return\":\"returns a bytes32 with the type of account or empty if there is no account\"},\"getSenderRole()\":{\"return\":\"returns a bytes32 with the type of account or empty if there is no account\"},\"isAllowed(address,address)\":{\"params\":{\"_allowed\":\"address of the actor to check if has permission.\",\"_allower\":\"address of the allower.\"},\"return\":\"returns true if _allowed has permission, false otherwise.\"},\"isBenefit(address)\":{\"params\":{\"_accountAddress\":\"address of account to check\"},\"return\":\"true if is exists false if not\"},\"isCertifier(address)\":{\"params\":{\"_accountAddress\":\"address of account to check\"},\"return\":\"true if is exists false if not\"},\"isCooperative(address)\":{\"params\":{\"_cooperative\":\"The address to be checked\"},\"return\":\"true if the address passed to the function belongs to a cooperative false otherwise\"},\"isFarmer(address)\":{\"params\":{\"_farmer\":\"The address to be checked\"},\"return\":\"true if the address passed to the function belongs to a farmer false otherwise\"},\"isRoaster(address)\":{\"params\":{\"_accountAddress\":\"address of account to check\"},\"return\":\"true if is exists false if not\"},\"isTaster(address)\":{\"params\":{\"_accountAddress\":\"address of account to check\"},\"return\":\"true if is exists false if not\"},\"isTechnician(address)\":{\"params\":{\"_accountAddress\":\"address of account to check\"},\"return\":\"true if is exists false if not\"},\"isValidator(address)\":{\"params\":{\"_accountAddress\":\"address of account to check\"},\"return\":\"true if is exists false if not\"}}},\"userdoc\":{\"methods\":{\"actorExists(address)\":{\"notice\":\"checks if an actor exists\"},\"addActor(bytes32)\":{\"notice\":\"creates a new actor from sender\"},\"approve(address,bool)\":{\"notice\":\"approves actor\"},\"cooperativeAddActor(bytes32,address)\":{\"notice\":\"Cooperative creates new actor\"},\"cooperativeApprove(address,address,bool)\":{\"notice\":\"approves actor from cooperative\"},\"cooperativeDestroyActor(address)\":{\"notice\":\"destroys an actor\"},\"destroyActor()\":{\"notice\":\"destroys an actor\"},\"getAccountType(address)\":{\"notice\":\"Gets the type of the account.\"},\"getSenderRole()\":{\"notice\":\"Gets the type of the sender account.\"},\"isAllowed(address,address)\":{\"notice\":\"Checks if a user has permission from another user.\"},\"isBenefit(address)\":{\"notice\":\"checks if account is a benefit\"},\"isCertifier(address)\":{\"notice\":\"checks if account is a certifier\"},\"isCooperative(address)\":{\"notice\":\"Returns true if the address passed to it belongs to a cooperative account\"},\"isFarmer(address)\":{\"notice\":\"Returns true if the address passed to it belongs to a farmer account\"},\"isRoaster(address)\":{\"notice\":\"checks if account is a roaster\"},\"isTaster(address)\":{\"notice\":\"checks if account is a taster\"},\"isTechnician(address)\":{\"notice\":\"checks if account is a technician\"},\"isValidator(address)\":{\"notice\":\"checks if account is a validator\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/interfaces/IActor.sol\":\"IActor\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/interfaces/IActor.sol\":{\"keccak256\":\"0x93adf2cec70c095f7f853e7d494e77c49350c9909eacdd75a6c76a17a0160704\",\"urls\":[\"bzzr://1abe3fe8fcd7805cd2d8f70166685523f43e0fc49d998b2d1fa4834925578dff\",\"dweb:/ipfs/QmXh9uRXQHN1F9wpbGeEyztZMWvBW5AF95yuDCE8LhgCJG\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.9;\n\ninterface IActor {\n\n    /** @notice Gets the type of the account.\n      * @param _owner address of the owner.\n      * @return returns a bytes32 with the type of account or empty if there is no account\n      */\n    function getAccountType(address _owner) external view returns (bytes32);\n\n    /** @notice Gets the type of the sender account.\n      * @return returns a bytes32 with the type of account or empty if there is no account\n      */\n    function getSenderRole() external view returns (bytes32);\n\n    /** @notice checks if an actor exists\n      * @param _actorAddress address of actor to check\n      * @return true if is exists false if not\n      */\n    function actorExists(address _actorAddress) external view returns(bool);\n\n    /** @notice Checks if a user has permission from another user.\n      * @param _allower address of the allower.\n      * @param _allowed address of the actor to check if has permission.\n      * @return returns true if _allowed has permission, false otherwise.\n      */\n    function isAllowed(address _allower, address _allowed) external view returns (bool);\n\n    /** @notice creates a new actor from sender\n      * @param _role type of account of the actor.\n      */\n    function addActor(bytes32 _role) external;\n\n    /** @notice Cooperative creates new actor\n      * @param _role type of account of the actor.\n      * @param _actorAddress address of the actor.\n      * @dev Only Cooperatives can call this method\n      */\n    function cooperativeAddActor(\n        bytes32 _role,\n        address _actorAddress\n    ) external;\n\n    /** @notice approves actor\n      * @param _allowed address of actor to assign the permission.\n      * @param _value value to be set.\n      * @return true if is success\n      */\n    function approve(address _allowed, bool _value) external returns (bool);\n\n    /** @notice approves actor from cooperative\n      * @param _allower address of actor to giving the permission.\n      * @param _allowed address of actor to assign the permission.\n      * @param _value value to be set.\n      * @return true if is success\n      * @dev Only Cooperatives can call this method\n      */\n    function cooperativeApprove(address _allower, address _allowed, bool _value) external  returns (bool);\n\n    /** @notice destroys an actor\n      * @dev only actor can destroy account\n      */\n    function destroyActor() external;\n\n    /** @notice destroys an actor\n      * @param _actorAddress address of the actor.\n      * @dev Only Cooperatives can call this method\n      * @dev only actor can destroy account\n      */\n    function cooperativeDestroyActor(address _actorAddress) external;\n\n    /** @notice Returns true if the address passed to it belongs to a cooperative account\n      * @param _cooperative The address to be checked\n      * @return true if the address passed to the function belongs to a cooperative false otherwise\n      */\n    function isCooperative(address _cooperative) external view returns (bool);\n\n    /** @notice Returns true if the address passed to it belongs to a farmer account\n      * @param _farmer The address to be checked\n      * @return true if the address passed to the function belongs to a farmer false otherwise\n      */\n    function isFarmer(address _farmer) external view returns (bool);\n\n    /** @notice checks if account is a certifier\n      * @param _accountAddress address of account to check\n      * @return true if is exists false if not\n      */\n    function isCertifier(address _accountAddress) external view returns (bool);\n\n    /** @notice checks if account is a technician\n      * @param _accountAddress address of account to check\n      * @return true if is exists false if not\n      */\n    function isTechnician(address _accountAddress) external view returns (bool);\n\n    /** @notice checks if account is a taster\n      * @param _accountAddress address of account to check\n      * @return true if is exists false if not\n      */\n    function isTaster(address _accountAddress) external view returns (bool);\n\n    /** @notice checks if account is a validator\n      * @param _accountAddress address of account to check\n      * @return true if is exists false if not\n      */\n    function isValidator(address _accountAddress) external view returns (bool);\n\n    /** @notice checks if account is a benefit\n      * @param _accountAddress address of account to check\n      * @return true if is exists false if not\n      */\n    function isBenefit(address _accountAddress) external view returns (bool);\n\n    /** @notice checks if account is a roaster\n      * @param _accountAddress address of account to check\n      * @return true if is exists false if not\n      */\n    function isRoaster(address _accountAddress) external view returns (bool);\n\n    /** @notice Logs when an Actor is created. */\n    event LogAddActor(\n        address _actorAddress,\n        bytes32 _role\n    );\n\n    /** @notice Logs when a cooperative creates an Actor. */\n    event LogCooperativeAddActor(\n        address _cooperativeAddress,\n        address _actorAddress,\n        bytes32 _role\n    );\n\n    /** @notice Logs when an Actor is destroyed. */\n    event LogDestroyActor(\n        address _actorAddress\n    );\n\n    /** @notice Logs when a cooperative destroys an Actor. */\n    event LogCooperativeDestroyActor(\n        address _cooperativeAddress,\n        address _actorAddress\n    );\n\n    /** @notice Logs when an Actor gives permission. */\n    event LogApproval(\n        address indexed _owner,\n        address indexed _allowed,\n        bool _value\n    );\n\n    /** @notice Logs when a Cooperative approves for an Actor. */\n    event LogCooperativeApproval(\n        address indexed _owner,\n        address indexed _allowed,\n        bool _value,\n        address _cooperativeAddress\n    );\n}\n",
-  "sourcePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/IActor.sol",
+  "sourcePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/interfaces/IActor.sol",
   "ast": {
-    "absolutePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/IActor.sol",
+    "absolutePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/interfaces/IActor.sol",
     "exportedSymbols": {
       "IActor": [
-        2091
+        2637
       ]
     },
-    "id": 2092,
+    "id": 2638,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1924,
+        "id": 2470,
         "literals": [
           "solidity",
           "^",
@@ -477,7 +477,7 @@
           ".9"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:5"
+        "src": "0:23:9"
       },
       {
         "baseContracts": [],
@@ -485,9 +485,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2091,
+        "id": 2637,
         "linearizedBaseContracts": [
-          2091
+          2637
         ],
         "name": "IActor",
         "nodeType": "ContractDefinition",
@@ -495,23 +495,23 @@
           {
             "body": null,
             "documentation": "@notice Gets the type of the account.\n@param _owner address of the owner.\n@return returns a bytes32 with the type of account or empty if there is no account",
-            "id": 1931,
+            "id": 2477,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getAccountType",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1927,
+              "id": 2473,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1926,
+                  "id": 2472,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1931,
-                  "src": "263:14:5",
+                  "scope": 2477,
+                  "src": "263:14:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -519,10 +519,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1925,
+                    "id": 2471,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "263:7:5",
+                    "src": "263:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -533,19 +533,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "262:16:5"
+              "src": "262:16:9"
             },
             "returnParameters": {
-              "id": 1930,
+              "id": 2476,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1929,
+                  "id": 2475,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1931,
-                  "src": "302:7:5",
+                  "scope": 2477,
+                  "src": "302:7:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -553,10 +553,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1928,
+                    "id": 2474,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "302:7:5",
+                    "src": "302:7:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -566,10 +566,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "301:9:5"
+              "src": "301:9:9"
             },
-            "scope": 2091,
-            "src": "239:72:5",
+            "scope": 2637,
+            "src": "239:72:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -577,29 +577,29 @@
           {
             "body": null,
             "documentation": "@notice Gets the type of the sender account.\n@return returns a bytes32 with the type of account or empty if there is no account",
-            "id": 1936,
+            "id": 2482,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getSenderRole",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1932,
+              "id": 2478,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "492:2:5"
+              "src": "492:2:9"
             },
             "returnParameters": {
-              "id": 1935,
+              "id": 2481,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1934,
+                  "id": 2480,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1936,
-                  "src": "518:7:5",
+                  "scope": 2482,
+                  "src": "518:7:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -607,10 +607,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1933,
+                    "id": 2479,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "518:7:5",
+                    "src": "518:7:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -620,10 +620,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "517:9:5"
+              "src": "517:9:9"
             },
-            "scope": 2091,
-            "src": "470:57:5",
+            "scope": 2637,
+            "src": "470:57:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -631,23 +631,23 @@
           {
             "body": null,
             "documentation": "@notice checks if an actor exists\n@param _actorAddress address of actor to check\n@return true if is exists false if not",
-            "id": 1943,
+            "id": 2489,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "actorExists",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1939,
+              "id": 2485,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1938,
+                  "id": 2484,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1943,
-                  "src": "707:21:5",
+                  "scope": 2489,
+                  "src": "707:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -655,10 +655,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1937,
+                    "id": 2483,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "707:7:5",
+                    "src": "707:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -669,19 +669,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "706:23:5"
+              "src": "706:23:9"
             },
             "returnParameters": {
-              "id": 1942,
+              "id": 2488,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1941,
+                  "id": 2487,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1943,
-                  "src": "752:4:5",
+                  "scope": 2489,
+                  "src": "752:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -689,10 +689,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1940,
+                    "id": 2486,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "752:4:5",
+                    "src": "752:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -702,10 +702,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "751:6:5"
+              "src": "751:6:9"
             },
-            "scope": 2091,
-            "src": "686:72:5",
+            "scope": 2637,
+            "src": "686:72:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -713,23 +713,23 @@
           {
             "body": null,
             "documentation": "@notice Checks if a user has permission from another user.\n@param _allower address of the allower.\n@param _allowed address of the actor to check if has permission.\n@return returns true if _allowed has permission, false otherwise.",
-            "id": 1952,
+            "id": 2498,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isAllowed",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1948,
+              "id": 2494,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1945,
+                  "id": 2491,
                   "name": "_allower",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1952,
-                  "src": "1054:16:5",
+                  "scope": 2498,
+                  "src": "1054:16:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -737,10 +737,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1944,
+                    "id": 2490,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1054:7:5",
+                    "src": "1054:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -752,11 +752,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1947,
+                  "id": 2493,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1952,
-                  "src": "1072:16:5",
+                  "scope": 2498,
+                  "src": "1072:16:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -764,10 +764,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1946,
+                    "id": 2492,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1072:7:5",
+                    "src": "1072:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -778,19 +778,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1053:36:5"
+              "src": "1053:36:9"
             },
             "returnParameters": {
-              "id": 1951,
+              "id": 2497,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1950,
+                  "id": 2496,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1952,
-                  "src": "1113:4:5",
+                  "scope": 2498,
+                  "src": "1113:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -798,10 +798,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1949,
+                    "id": 2495,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1113:4:5",
+                    "src": "1113:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -811,10 +811,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1112:6:5"
+              "src": "1112:6:9"
             },
-            "scope": 2091,
-            "src": "1035:84:5",
+            "scope": 2637,
+            "src": "1035:84:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -822,23 +822,23 @@
           {
             "body": null,
             "documentation": "@notice creates a new actor from sender\n@param _role type of account of the actor.",
-            "id": 1957,
+            "id": 2503,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "addActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1955,
+              "id": 2501,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1954,
+                  "id": 2500,
                   "name": "_role",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1957,
-                  "src": "1251:13:5",
+                  "scope": 2503,
+                  "src": "1251:13:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -846,10 +846,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1953,
+                    "id": 2499,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1251:7:5",
+                    "src": "1251:7:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -859,16 +859,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1250:15:5"
+              "src": "1250:15:9"
             },
             "returnParameters": {
-              "id": 1956,
+              "id": 2502,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1274:0:5"
+              "src": "1274:0:9"
             },
-            "scope": 2091,
-            "src": "1233:42:5",
+            "scope": 2637,
+            "src": "1233:42:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -876,23 +876,23 @@
           {
             "body": null,
             "documentation": "@notice Cooperative creates new actor\n@param _role type of account of the actor.\n@param _actorAddress address of the actor.\n@dev Only Cooperatives can call this method",
-            "id": 1964,
+            "id": 2510,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "cooperativeAddActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1962,
+              "id": 2508,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1959,
+                  "id": 2505,
                   "name": "_role",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1964,
-                  "src": "1528:13:5",
+                  "scope": 2510,
+                  "src": "1528:13:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -900,10 +900,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1958,
+                    "id": 2504,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1528:7:5",
+                    "src": "1528:7:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -914,11 +914,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1961,
+                  "id": 2507,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1964,
-                  "src": "1551:21:5",
+                  "scope": 2510,
+                  "src": "1551:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -926,10 +926,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1960,
+                    "id": 2506,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1551:7:5",
+                    "src": "1551:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -940,16 +940,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1518:60:5"
+              "src": "1518:60:9"
             },
             "returnParameters": {
-              "id": 1963,
+              "id": 2509,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1587:0:5"
+              "src": "1587:0:9"
             },
-            "scope": 2091,
-            "src": "1490:98:5",
+            "scope": 2637,
+            "src": "1490:98:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -957,23 +957,23 @@
           {
             "body": null,
             "documentation": "@notice approves actor\n@param _allowed address of actor to assign the permission.\n@param _value value to be set.\n@return true if is success",
-            "id": 1973,
+            "id": 2519,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "approve",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1969,
+              "id": 2515,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1966,
+                  "id": 2512,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1973,
-                  "src": "1792:16:5",
+                  "scope": 2519,
+                  "src": "1792:16:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -981,10 +981,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1965,
+                    "id": 2511,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1792:7:5",
+                    "src": "1792:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -996,11 +996,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1968,
+                  "id": 2514,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1973,
-                  "src": "1810:11:5",
+                  "scope": 2519,
+                  "src": "1810:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1008,10 +1008,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1967,
+                    "id": 2513,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1810:4:5",
+                    "src": "1810:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1021,19 +1021,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1791:31:5"
+              "src": "1791:31:9"
             },
             "returnParameters": {
-              "id": 1972,
+              "id": 2518,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1971,
+                  "id": 2517,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1973,
-                  "src": "1841:4:5",
+                  "scope": 2519,
+                  "src": "1841:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1041,10 +1041,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1970,
+                    "id": 2516,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1841:4:5",
+                    "src": "1841:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1054,10 +1054,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1840:6:5"
+              "src": "1840:6:9"
             },
-            "scope": 2091,
-            "src": "1775:72:5",
+            "scope": 2637,
+            "src": "1775:72:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -1065,23 +1065,23 @@
           {
             "body": null,
             "documentation": "@notice approves actor from cooperative\n@param _allower address of actor to giving the permission.\n@param _allowed address of actor to assign the permission.\n@param _value value to be set.\n@return true if is success\n@dev Only Cooperatives can call this method",
-            "id": 1984,
+            "id": 2530,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "cooperativeApprove",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1980,
+              "id": 2526,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1975,
+                  "id": 2521,
                   "name": "_allower",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1984,
-                  "src": "2198:16:5",
+                  "scope": 2530,
+                  "src": "2198:16:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1089,10 +1089,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1974,
+                    "id": 2520,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2198:7:5",
+                    "src": "2198:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1104,11 +1104,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1977,
+                  "id": 2523,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1984,
-                  "src": "2216:16:5",
+                  "scope": 2530,
+                  "src": "2216:16:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1116,10 +1116,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1976,
+                    "id": 2522,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2216:7:5",
+                    "src": "2216:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1131,11 +1131,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1979,
+                  "id": 2525,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1984,
-                  "src": "2234:11:5",
+                  "scope": 2530,
+                  "src": "2234:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1143,10 +1143,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1978,
+                    "id": 2524,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2234:4:5",
+                    "src": "2234:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1156,19 +1156,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2197:49:5"
+              "src": "2197:49:9"
             },
             "returnParameters": {
-              "id": 1983,
+              "id": 2529,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1982,
+                  "id": 2528,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1984,
-                  "src": "2266:4:5",
+                  "scope": 2530,
+                  "src": "2266:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1176,10 +1176,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1981,
+                    "id": 2527,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2266:4:5",
+                    "src": "2266:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1189,10 +1189,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2265:6:5"
+              "src": "2265:6:9"
             },
-            "scope": 2091,
-            "src": "2170:102:5",
+            "scope": 2637,
+            "src": "2170:102:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -1200,26 +1200,26 @@
           {
             "body": null,
             "documentation": "@notice destroys an actor\n@dev only actor can destroy account",
-            "id": 1987,
+            "id": 2533,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "destroyActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1985,
+              "id": 2531,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2386:2:5"
+              "src": "2386:2:9"
             },
             "returnParameters": {
-              "id": 1986,
+              "id": 2532,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2397:0:5"
+              "src": "2397:0:9"
             },
-            "scope": 2091,
-            "src": "2365:33:5",
+            "scope": 2637,
+            "src": "2365:33:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -1227,23 +1227,23 @@
           {
             "body": null,
             "documentation": "@notice destroys an actor\n@param _actorAddress address of the actor.\n@dev Only Cooperatives can call this method\n@dev only actor can destroy account",
-            "id": 1992,
+            "id": 2538,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "cooperativeDestroyActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1990,
+              "id": 2536,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1989,
+                  "id": 2535,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1992,
-                  "src": "2627:21:5",
+                  "scope": 2538,
+                  "src": "2627:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1251,10 +1251,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1988,
+                    "id": 2534,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2627:7:5",
+                    "src": "2627:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1265,16 +1265,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2626:23:5"
+              "src": "2626:23:9"
             },
             "returnParameters": {
-              "id": 1991,
+              "id": 2537,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2658:0:5"
+              "src": "2658:0:9"
             },
-            "scope": 2091,
-            "src": "2594:65:5",
+            "scope": 2637,
+            "src": "2594:65:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -1282,23 +1282,23 @@
           {
             "body": null,
             "documentation": "@notice Returns true if the address passed to it belongs to a cooperative account\n@param _cooperative The address to be checked\n@return true if the address passed to the function belongs to a cooperative false otherwise",
-            "id": 1999,
+            "id": 2545,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isCooperative",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1995,
+              "id": 2541,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1994,
+                  "id": 2540,
                   "name": "_cooperative",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1999,
-                  "src": "2941:20:5",
+                  "scope": 2545,
+                  "src": "2941:20:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1306,10 +1306,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1993,
+                    "id": 2539,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2941:7:5",
+                    "src": "2941:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1320,19 +1320,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2940:22:5"
+              "src": "2940:22:9"
             },
             "returnParameters": {
-              "id": 1998,
+              "id": 2544,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1997,
+                  "id": 2543,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1999,
-                  "src": "2986:4:5",
+                  "scope": 2545,
+                  "src": "2986:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1340,10 +1340,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1996,
+                    "id": 2542,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2986:4:5",
+                    "src": "2986:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1353,10 +1353,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2985:6:5"
+              "src": "2985:6:9"
             },
-            "scope": 2091,
-            "src": "2918:74:5",
+            "scope": 2637,
+            "src": "2918:74:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -1364,23 +1364,23 @@
           {
             "body": null,
             "documentation": "@notice Returns true if the address passed to it belongs to a farmer account\n@param _farmer The address to be checked\n@return true if the address passed to the function belongs to a farmer false otherwise",
-            "id": 2006,
+            "id": 2552,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2002,
+              "id": 2548,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2001,
+                  "id": 2547,
                   "name": "_farmer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2006,
-                  "src": "3254:15:5",
+                  "scope": 2552,
+                  "src": "3254:15:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1388,10 +1388,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2000,
+                    "id": 2546,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3254:7:5",
+                    "src": "3254:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1402,19 +1402,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3253:17:5"
+              "src": "3253:17:9"
             },
             "returnParameters": {
-              "id": 2005,
+              "id": 2551,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2004,
+                  "id": 2550,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2006,
-                  "src": "3294:4:5",
+                  "scope": 2552,
+                  "src": "3294:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1422,10 +1422,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2003,
+                    "id": 2549,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3294:4:5",
+                    "src": "3294:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1435,10 +1435,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3293:6:5"
+              "src": "3293:6:9"
             },
-            "scope": 2091,
-            "src": "3236:64:5",
+            "scope": 2637,
+            "src": "3236:64:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -1446,23 +1446,23 @@
           {
             "body": null,
             "documentation": "@notice checks if account is a certifier\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2013,
+            "id": 2559,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isCertifier",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2009,
+              "id": 2555,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2008,
+                  "id": 2554,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2013,
-                  "src": "3491:23:5",
+                  "scope": 2559,
+                  "src": "3491:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1470,10 +1470,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2007,
+                    "id": 2553,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3491:7:5",
+                    "src": "3491:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1484,19 +1484,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3490:25:5"
+              "src": "3490:25:9"
             },
             "returnParameters": {
-              "id": 2012,
+              "id": 2558,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2011,
+                  "id": 2557,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2013,
-                  "src": "3539:4:5",
+                  "scope": 2559,
+                  "src": "3539:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1504,10 +1504,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2010,
+                    "id": 2556,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3539:4:5",
+                    "src": "3539:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1517,10 +1517,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3538:6:5"
+              "src": "3538:6:9"
             },
-            "scope": 2091,
-            "src": "3470:75:5",
+            "scope": 2637,
+            "src": "3470:75:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -1528,23 +1528,23 @@
           {
             "body": null,
             "documentation": "@notice checks if account is a technician\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2020,
+            "id": 2566,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isTechnician",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2016,
+              "id": 2562,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2015,
+                  "id": 2561,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2020,
-                  "src": "3738:23:5",
+                  "scope": 2566,
+                  "src": "3738:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1552,10 +1552,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2014,
+                    "id": 2560,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3738:7:5",
+                    "src": "3738:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1566,19 +1566,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3737:25:5"
+              "src": "3737:25:9"
             },
             "returnParameters": {
-              "id": 2019,
+              "id": 2565,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2018,
+                  "id": 2564,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2020,
-                  "src": "3786:4:5",
+                  "scope": 2566,
+                  "src": "3786:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1586,10 +1586,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2017,
+                    "id": 2563,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3786:4:5",
+                    "src": "3786:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1599,10 +1599,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3785:6:5"
+              "src": "3785:6:9"
             },
-            "scope": 2091,
-            "src": "3716:76:5",
+            "scope": 2637,
+            "src": "3716:76:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -1610,23 +1610,23 @@
           {
             "body": null,
             "documentation": "@notice checks if account is a taster\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2027,
+            "id": 2573,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isTaster",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2023,
+              "id": 2569,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2022,
+                  "id": 2568,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2027,
-                  "src": "3977:23:5",
+                  "scope": 2573,
+                  "src": "3977:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1634,10 +1634,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2021,
+                    "id": 2567,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3977:7:5",
+                    "src": "3977:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1648,19 +1648,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3976:25:5"
+              "src": "3976:25:9"
             },
             "returnParameters": {
-              "id": 2026,
+              "id": 2572,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2025,
+                  "id": 2571,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2027,
-                  "src": "4025:4:5",
+                  "scope": 2573,
+                  "src": "4025:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1668,10 +1668,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2024,
+                    "id": 2570,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4025:4:5",
+                    "src": "4025:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1681,10 +1681,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4024:6:5"
+              "src": "4024:6:9"
             },
-            "scope": 2091,
-            "src": "3959:72:5",
+            "scope": 2637,
+            "src": "3959:72:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -1692,23 +1692,23 @@
           {
             "body": null,
             "documentation": "@notice checks if account is a validator\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2034,
+            "id": 2580,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isValidator",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2030,
+              "id": 2576,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2029,
+                  "id": 2575,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2034,
-                  "src": "4222:23:5",
+                  "scope": 2580,
+                  "src": "4222:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1716,10 +1716,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2028,
+                    "id": 2574,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4222:7:5",
+                    "src": "4222:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1730,19 +1730,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4221:25:5"
+              "src": "4221:25:9"
             },
             "returnParameters": {
-              "id": 2033,
+              "id": 2579,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2032,
+                  "id": 2578,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2034,
-                  "src": "4270:4:5",
+                  "scope": 2580,
+                  "src": "4270:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1750,10 +1750,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2031,
+                    "id": 2577,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4270:4:5",
+                    "src": "4270:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1763,10 +1763,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4269:6:5"
+              "src": "4269:6:9"
             },
-            "scope": 2091,
-            "src": "4201:75:5",
+            "scope": 2637,
+            "src": "4201:75:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -1774,23 +1774,23 @@
           {
             "body": null,
             "documentation": "@notice checks if account is a benefit\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2041,
+            "id": 2587,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isBenefit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2037,
+              "id": 2583,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2036,
+                  "id": 2582,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2041,
-                  "src": "4463:23:5",
+                  "scope": 2587,
+                  "src": "4463:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1798,10 +1798,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2035,
+                    "id": 2581,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4463:7:5",
+                    "src": "4463:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1812,19 +1812,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4462:25:5"
+              "src": "4462:25:9"
             },
             "returnParameters": {
-              "id": 2040,
+              "id": 2586,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2039,
+                  "id": 2585,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2041,
-                  "src": "4511:4:5",
+                  "scope": 2587,
+                  "src": "4511:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1832,10 +1832,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2038,
+                    "id": 2584,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4511:4:5",
+                    "src": "4511:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1845,10 +1845,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4510:6:5"
+              "src": "4510:6:9"
             },
-            "scope": 2091,
-            "src": "4444:73:5",
+            "scope": 2637,
+            "src": "4444:73:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -1856,23 +1856,23 @@
           {
             "body": null,
             "documentation": "@notice checks if account is a roaster\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2048,
+            "id": 2594,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isRoaster",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2044,
+              "id": 2590,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2043,
+                  "id": 2589,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2048,
-                  "src": "4704:23:5",
+                  "scope": 2594,
+                  "src": "4704:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1880,10 +1880,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2042,
+                    "id": 2588,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4704:7:5",
+                    "src": "4704:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1894,19 +1894,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4703:25:5"
+              "src": "4703:25:9"
             },
             "returnParameters": {
-              "id": 2047,
+              "id": 2593,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2046,
+                  "id": 2592,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2048,
-                  "src": "4752:4:5",
+                  "scope": 2594,
+                  "src": "4752:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1914,10 +1914,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2045,
+                    "id": 2591,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4752:4:5",
+                    "src": "4752:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1927,10 +1927,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4751:6:5"
+              "src": "4751:6:9"
             },
-            "scope": 2091,
-            "src": "4685:73:5",
+            "scope": 2637,
+            "src": "4685:73:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -1938,21 +1938,21 @@
           {
             "anonymous": false,
             "documentation": "@notice Logs when an Actor is created. ",
-            "id": 2054,
+            "id": 2600,
             "name": "LogAddActor",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2053,
+              "id": 2599,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2050,
+                  "id": 2596,
                   "indexed": false,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2054,
-                  "src": "4841:21:5",
+                  "scope": 2600,
+                  "src": "4841:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1960,10 +1960,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2049,
+                    "id": 2595,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4841:7:5",
+                    "src": "4841:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1975,12 +1975,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2052,
+                  "id": 2598,
                   "indexed": false,
                   "name": "_role",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2054,
-                  "src": "4872:13:5",
+                  "scope": 2600,
+                  "src": "4872:13:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1988,10 +1988,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2051,
+                    "id": 2597,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4872:7:5",
+                    "src": "4872:7:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2001,28 +2001,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4831:60:5"
+              "src": "4831:60:9"
             },
-            "src": "4814:78:5"
+            "src": "4814:78:9"
           },
           {
             "anonymous": false,
             "documentation": "@notice Logs when a cooperative creates an Actor. ",
-            "id": 2062,
+            "id": 2608,
             "name": "LogCooperativeAddActor",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2061,
+              "id": 2607,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2056,
+                  "id": 2602,
                   "indexed": false,
                   "name": "_cooperativeAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2062,
-                  "src": "4997:27:5",
+                  "scope": 2608,
+                  "src": "4997:27:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2030,10 +2030,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2055,
+                    "id": 2601,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4997:7:5",
+                    "src": "4997:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2045,12 +2045,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2058,
+                  "id": 2604,
                   "indexed": false,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2062,
-                  "src": "5034:21:5",
+                  "scope": 2608,
+                  "src": "5034:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2058,10 +2058,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2057,
+                    "id": 2603,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5034:7:5",
+                    "src": "5034:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2073,12 +2073,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2060,
+                  "id": 2606,
                   "indexed": false,
                   "name": "_role",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2062,
-                  "src": "5065:13:5",
+                  "scope": 2608,
+                  "src": "5065:13:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2086,10 +2086,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2059,
+                    "id": 2605,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5065:7:5",
+                    "src": "5065:7:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2099,28 +2099,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4987:97:5"
+              "src": "4987:97:9"
             },
-            "src": "4959:126:5"
+            "src": "4959:126:9"
           },
           {
             "anonymous": false,
             "documentation": "@notice Logs when an Actor is destroyed. ",
-            "id": 2066,
+            "id": 2612,
             "name": "LogDestroyActor",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2065,
+              "id": 2611,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2064,
+                  "id": 2610,
                   "indexed": false,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2066,
-                  "src": "5174:21:5",
+                  "scope": 2612,
+                  "src": "5174:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2128,10 +2128,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2063,
+                    "id": 2609,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5174:7:5",
+                    "src": "5174:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2142,28 +2142,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5164:37:5"
+              "src": "5164:37:9"
             },
-            "src": "5143:59:5"
+            "src": "5143:59:9"
           },
           {
             "anonymous": false,
             "documentation": "@notice Logs when a cooperative destroys an Actor. ",
-            "id": 2072,
+            "id": 2618,
             "name": "LogCooperativeDestroyActor",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2071,
+              "id": 2617,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2068,
+                  "id": 2614,
                   "indexed": false,
                   "name": "_cooperativeAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2072,
-                  "src": "5312:27:5",
+                  "scope": 2618,
+                  "src": "5312:27:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2171,10 +2171,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2067,
+                    "id": 2613,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5312:7:5",
+                    "src": "5312:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2186,12 +2186,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2070,
+                  "id": 2616,
                   "indexed": false,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2072,
-                  "src": "5349:21:5",
+                  "scope": 2618,
+                  "src": "5349:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2199,10 +2199,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2069,
+                    "id": 2615,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5349:7:5",
+                    "src": "5349:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2213,28 +2213,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5302:74:5"
+              "src": "5302:74:9"
             },
-            "src": "5270:107:5"
+            "src": "5270:107:9"
           },
           {
             "anonymous": false,
             "documentation": "@notice Logs when an Actor gives permission. ",
-            "id": 2080,
+            "id": 2626,
             "name": "LogApproval",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2079,
+              "id": 2625,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2074,
+                  "id": 2620,
                   "indexed": true,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2080,
-                  "src": "5466:22:5",
+                  "scope": 2626,
+                  "src": "5466:22:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2242,10 +2242,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2073,
+                    "id": 2619,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5466:7:5",
+                    "src": "5466:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2257,12 +2257,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2076,
+                  "id": 2622,
                   "indexed": true,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2080,
-                  "src": "5498:24:5",
+                  "scope": 2626,
+                  "src": "5498:24:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2270,10 +2270,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2075,
+                    "id": 2621,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5498:7:5",
+                    "src": "5498:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2285,12 +2285,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2078,
+                  "id": 2624,
                   "indexed": false,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2080,
-                  "src": "5532:11:5",
+                  "scope": 2626,
+                  "src": "5532:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2298,10 +2298,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2077,
+                    "id": 2623,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5532:4:5",
+                    "src": "5532:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2311,28 +2311,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5456:93:5"
+              "src": "5456:93:9"
             },
-            "src": "5439:111:5"
+            "src": "5439:111:9"
           },
           {
             "anonymous": false,
             "documentation": "@notice Logs when a Cooperative approves for an Actor. ",
-            "id": 2090,
+            "id": 2636,
             "name": "LogCooperativeApproval",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2089,
+              "id": 2635,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2082,
+                  "id": 2628,
                   "indexed": true,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2090,
-                  "src": "5660:22:5",
+                  "scope": 2636,
+                  "src": "5660:22:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2340,10 +2340,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2081,
+                    "id": 2627,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5660:7:5",
+                    "src": "5660:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2355,12 +2355,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2084,
+                  "id": 2630,
                   "indexed": true,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2090,
-                  "src": "5692:24:5",
+                  "scope": 2636,
+                  "src": "5692:24:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2368,10 +2368,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2083,
+                    "id": 2629,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5692:7:5",
+                    "src": "5692:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2383,12 +2383,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2086,
+                  "id": 2632,
                   "indexed": false,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2090,
-                  "src": "5726:11:5",
+                  "scope": 2636,
+                  "src": "5726:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2396,10 +2396,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2085,
+                    "id": 2631,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5726:4:5",
+                    "src": "5726:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2410,12 +2410,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2088,
+                  "id": 2634,
                   "indexed": false,
                   "name": "_cooperativeAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2090,
-                  "src": "5747:27:5",
+                  "scope": 2636,
+                  "src": "5747:27:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2423,10 +2423,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2087,
+                    "id": 2633,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5747:7:5",
+                    "src": "5747:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2437,29 +2437,29 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5650:130:5"
+              "src": "5650:130:9"
             },
-            "src": "5622:159:5"
+            "src": "5622:159:9"
           }
         ],
-        "scope": 2092,
-        "src": "25:5758:5"
+        "scope": 2638,
+        "src": "25:5758:9"
       }
     ],
-    "src": "0:5784:5"
+    "src": "0:5784:9"
   },
   "legacyAST": {
-    "absolutePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/IActor.sol",
+    "absolutePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/interfaces/IActor.sol",
     "exportedSymbols": {
       "IActor": [
-        2091
+        2637
       ]
     },
-    "id": 2092,
+    "id": 2638,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1924,
+        "id": 2470,
         "literals": [
           "solidity",
           "^",
@@ -2467,7 +2467,7 @@
           ".9"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:5"
+        "src": "0:23:9"
       },
       {
         "baseContracts": [],
@@ -2475,9 +2475,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2091,
+        "id": 2637,
         "linearizedBaseContracts": [
-          2091
+          2637
         ],
         "name": "IActor",
         "nodeType": "ContractDefinition",
@@ -2485,23 +2485,23 @@
           {
             "body": null,
             "documentation": "@notice Gets the type of the account.\n@param _owner address of the owner.\n@return returns a bytes32 with the type of account or empty if there is no account",
-            "id": 1931,
+            "id": 2477,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getAccountType",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1927,
+              "id": 2473,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1926,
+                  "id": 2472,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1931,
-                  "src": "263:14:5",
+                  "scope": 2477,
+                  "src": "263:14:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2509,10 +2509,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1925,
+                    "id": 2471,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "263:7:5",
+                    "src": "263:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2523,19 +2523,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "262:16:5"
+              "src": "262:16:9"
             },
             "returnParameters": {
-              "id": 1930,
+              "id": 2476,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1929,
+                  "id": 2475,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1931,
-                  "src": "302:7:5",
+                  "scope": 2477,
+                  "src": "302:7:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2543,10 +2543,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1928,
+                    "id": 2474,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "302:7:5",
+                    "src": "302:7:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2556,10 +2556,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "301:9:5"
+              "src": "301:9:9"
             },
-            "scope": 2091,
-            "src": "239:72:5",
+            "scope": 2637,
+            "src": "239:72:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -2567,29 +2567,29 @@
           {
             "body": null,
             "documentation": "@notice Gets the type of the sender account.\n@return returns a bytes32 with the type of account or empty if there is no account",
-            "id": 1936,
+            "id": 2482,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getSenderRole",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1932,
+              "id": 2478,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "492:2:5"
+              "src": "492:2:9"
             },
             "returnParameters": {
-              "id": 1935,
+              "id": 2481,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1934,
+                  "id": 2480,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1936,
-                  "src": "518:7:5",
+                  "scope": 2482,
+                  "src": "518:7:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2597,10 +2597,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1933,
+                    "id": 2479,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "518:7:5",
+                    "src": "518:7:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2610,10 +2610,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "517:9:5"
+              "src": "517:9:9"
             },
-            "scope": 2091,
-            "src": "470:57:5",
+            "scope": 2637,
+            "src": "470:57:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -2621,23 +2621,23 @@
           {
             "body": null,
             "documentation": "@notice checks if an actor exists\n@param _actorAddress address of actor to check\n@return true if is exists false if not",
-            "id": 1943,
+            "id": 2489,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "actorExists",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1939,
+              "id": 2485,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1938,
+                  "id": 2484,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1943,
-                  "src": "707:21:5",
+                  "scope": 2489,
+                  "src": "707:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2645,10 +2645,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1937,
+                    "id": 2483,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "707:7:5",
+                    "src": "707:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2659,19 +2659,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "706:23:5"
+              "src": "706:23:9"
             },
             "returnParameters": {
-              "id": 1942,
+              "id": 2488,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1941,
+                  "id": 2487,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1943,
-                  "src": "752:4:5",
+                  "scope": 2489,
+                  "src": "752:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2679,10 +2679,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1940,
+                    "id": 2486,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "752:4:5",
+                    "src": "752:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2692,10 +2692,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "751:6:5"
+              "src": "751:6:9"
             },
-            "scope": 2091,
-            "src": "686:72:5",
+            "scope": 2637,
+            "src": "686:72:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -2703,23 +2703,23 @@
           {
             "body": null,
             "documentation": "@notice Checks if a user has permission from another user.\n@param _allower address of the allower.\n@param _allowed address of the actor to check if has permission.\n@return returns true if _allowed has permission, false otherwise.",
-            "id": 1952,
+            "id": 2498,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isAllowed",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1948,
+              "id": 2494,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1945,
+                  "id": 2491,
                   "name": "_allower",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1952,
-                  "src": "1054:16:5",
+                  "scope": 2498,
+                  "src": "1054:16:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2727,10 +2727,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1944,
+                    "id": 2490,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1054:7:5",
+                    "src": "1054:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2742,11 +2742,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1947,
+                  "id": 2493,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1952,
-                  "src": "1072:16:5",
+                  "scope": 2498,
+                  "src": "1072:16:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2754,10 +2754,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1946,
+                    "id": 2492,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1072:7:5",
+                    "src": "1072:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2768,19 +2768,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1053:36:5"
+              "src": "1053:36:9"
             },
             "returnParameters": {
-              "id": 1951,
+              "id": 2497,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1950,
+                  "id": 2496,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1952,
-                  "src": "1113:4:5",
+                  "scope": 2498,
+                  "src": "1113:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2788,10 +2788,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1949,
+                    "id": 2495,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1113:4:5",
+                    "src": "1113:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2801,10 +2801,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1112:6:5"
+              "src": "1112:6:9"
             },
-            "scope": 2091,
-            "src": "1035:84:5",
+            "scope": 2637,
+            "src": "1035:84:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -2812,23 +2812,23 @@
           {
             "body": null,
             "documentation": "@notice creates a new actor from sender\n@param _role type of account of the actor.",
-            "id": 1957,
+            "id": 2503,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "addActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1955,
+              "id": 2501,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1954,
+                  "id": 2500,
                   "name": "_role",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1957,
-                  "src": "1251:13:5",
+                  "scope": 2503,
+                  "src": "1251:13:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2836,10 +2836,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1953,
+                    "id": 2499,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1251:7:5",
+                    "src": "1251:7:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2849,16 +2849,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1250:15:5"
+              "src": "1250:15:9"
             },
             "returnParameters": {
-              "id": 1956,
+              "id": 2502,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1274:0:5"
+              "src": "1274:0:9"
             },
-            "scope": 2091,
-            "src": "1233:42:5",
+            "scope": 2637,
+            "src": "1233:42:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -2866,23 +2866,23 @@
           {
             "body": null,
             "documentation": "@notice Cooperative creates new actor\n@param _role type of account of the actor.\n@param _actorAddress address of the actor.\n@dev Only Cooperatives can call this method",
-            "id": 1964,
+            "id": 2510,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "cooperativeAddActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1962,
+              "id": 2508,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1959,
+                  "id": 2505,
                   "name": "_role",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1964,
-                  "src": "1528:13:5",
+                  "scope": 2510,
+                  "src": "1528:13:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2890,10 +2890,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 1958,
+                    "id": 2504,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1528:7:5",
+                    "src": "1528:7:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2904,11 +2904,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1961,
+                  "id": 2507,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1964,
-                  "src": "1551:21:5",
+                  "scope": 2510,
+                  "src": "1551:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2916,10 +2916,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1960,
+                    "id": 2506,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1551:7:5",
+                    "src": "1551:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2930,16 +2930,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1518:60:5"
+              "src": "1518:60:9"
             },
             "returnParameters": {
-              "id": 1963,
+              "id": 2509,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1587:0:5"
+              "src": "1587:0:9"
             },
-            "scope": 2091,
-            "src": "1490:98:5",
+            "scope": 2637,
+            "src": "1490:98:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -2947,23 +2947,23 @@
           {
             "body": null,
             "documentation": "@notice approves actor\n@param _allowed address of actor to assign the permission.\n@param _value value to be set.\n@return true if is success",
-            "id": 1973,
+            "id": 2519,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "approve",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1969,
+              "id": 2515,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1966,
+                  "id": 2512,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1973,
-                  "src": "1792:16:5",
+                  "scope": 2519,
+                  "src": "1792:16:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2971,10 +2971,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1965,
+                    "id": 2511,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1792:7:5",
+                    "src": "1792:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2986,11 +2986,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1968,
+                  "id": 2514,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1973,
-                  "src": "1810:11:5",
+                  "scope": 2519,
+                  "src": "1810:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2998,10 +2998,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1967,
+                    "id": 2513,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1810:4:5",
+                    "src": "1810:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3011,19 +3011,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1791:31:5"
+              "src": "1791:31:9"
             },
             "returnParameters": {
-              "id": 1972,
+              "id": 2518,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1971,
+                  "id": 2517,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1973,
-                  "src": "1841:4:5",
+                  "scope": 2519,
+                  "src": "1841:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3031,10 +3031,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1970,
+                    "id": 2516,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1841:4:5",
+                    "src": "1841:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3044,10 +3044,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1840:6:5"
+              "src": "1840:6:9"
             },
-            "scope": 2091,
-            "src": "1775:72:5",
+            "scope": 2637,
+            "src": "1775:72:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -3055,23 +3055,23 @@
           {
             "body": null,
             "documentation": "@notice approves actor from cooperative\n@param _allower address of actor to giving the permission.\n@param _allowed address of actor to assign the permission.\n@param _value value to be set.\n@return true if is success\n@dev Only Cooperatives can call this method",
-            "id": 1984,
+            "id": 2530,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "cooperativeApprove",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1980,
+              "id": 2526,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1975,
+                  "id": 2521,
                   "name": "_allower",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1984,
-                  "src": "2198:16:5",
+                  "scope": 2530,
+                  "src": "2198:16:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3079,10 +3079,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1974,
+                    "id": 2520,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2198:7:5",
+                    "src": "2198:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3094,11 +3094,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1977,
+                  "id": 2523,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1984,
-                  "src": "2216:16:5",
+                  "scope": 2530,
+                  "src": "2216:16:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3106,10 +3106,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1976,
+                    "id": 2522,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2216:7:5",
+                    "src": "2216:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3121,11 +3121,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1979,
+                  "id": 2525,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1984,
-                  "src": "2234:11:5",
+                  "scope": 2530,
+                  "src": "2234:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3133,10 +3133,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1978,
+                    "id": 2524,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2234:4:5",
+                    "src": "2234:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3146,19 +3146,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2197:49:5"
+              "src": "2197:49:9"
             },
             "returnParameters": {
-              "id": 1983,
+              "id": 2529,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1982,
+                  "id": 2528,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1984,
-                  "src": "2266:4:5",
+                  "scope": 2530,
+                  "src": "2266:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3166,10 +3166,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1981,
+                    "id": 2527,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2266:4:5",
+                    "src": "2266:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3179,10 +3179,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2265:6:5"
+              "src": "2265:6:9"
             },
-            "scope": 2091,
-            "src": "2170:102:5",
+            "scope": 2637,
+            "src": "2170:102:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -3190,26 +3190,26 @@
           {
             "body": null,
             "documentation": "@notice destroys an actor\n@dev only actor can destroy account",
-            "id": 1987,
+            "id": 2533,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "destroyActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1985,
+              "id": 2531,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2386:2:5"
+              "src": "2386:2:9"
             },
             "returnParameters": {
-              "id": 1986,
+              "id": 2532,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2397:0:5"
+              "src": "2397:0:9"
             },
-            "scope": 2091,
-            "src": "2365:33:5",
+            "scope": 2637,
+            "src": "2365:33:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -3217,23 +3217,23 @@
           {
             "body": null,
             "documentation": "@notice destroys an actor\n@param _actorAddress address of the actor.\n@dev Only Cooperatives can call this method\n@dev only actor can destroy account",
-            "id": 1992,
+            "id": 2538,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "cooperativeDestroyActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1990,
+              "id": 2536,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1989,
+                  "id": 2535,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1992,
-                  "src": "2627:21:5",
+                  "scope": 2538,
+                  "src": "2627:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3241,10 +3241,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1988,
+                    "id": 2534,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2627:7:5",
+                    "src": "2627:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3255,16 +3255,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2626:23:5"
+              "src": "2626:23:9"
             },
             "returnParameters": {
-              "id": 1991,
+              "id": 2537,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2658:0:5"
+              "src": "2658:0:9"
             },
-            "scope": 2091,
-            "src": "2594:65:5",
+            "scope": 2637,
+            "src": "2594:65:9",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -3272,23 +3272,23 @@
           {
             "body": null,
             "documentation": "@notice Returns true if the address passed to it belongs to a cooperative account\n@param _cooperative The address to be checked\n@return true if the address passed to the function belongs to a cooperative false otherwise",
-            "id": 1999,
+            "id": 2545,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isCooperative",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1995,
+              "id": 2541,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1994,
+                  "id": 2540,
                   "name": "_cooperative",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1999,
-                  "src": "2941:20:5",
+                  "scope": 2545,
+                  "src": "2941:20:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3296,10 +3296,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1993,
+                    "id": 2539,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2941:7:5",
+                    "src": "2941:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3310,19 +3310,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2940:22:5"
+              "src": "2940:22:9"
             },
             "returnParameters": {
-              "id": 1998,
+              "id": 2544,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1997,
+                  "id": 2543,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1999,
-                  "src": "2986:4:5",
+                  "scope": 2545,
+                  "src": "2986:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3330,10 +3330,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1996,
+                    "id": 2542,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2986:4:5",
+                    "src": "2986:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3343,10 +3343,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2985:6:5"
+              "src": "2985:6:9"
             },
-            "scope": 2091,
-            "src": "2918:74:5",
+            "scope": 2637,
+            "src": "2918:74:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -3354,23 +3354,23 @@
           {
             "body": null,
             "documentation": "@notice Returns true if the address passed to it belongs to a farmer account\n@param _farmer The address to be checked\n@return true if the address passed to the function belongs to a farmer false otherwise",
-            "id": 2006,
+            "id": 2552,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2002,
+              "id": 2548,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2001,
+                  "id": 2547,
                   "name": "_farmer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2006,
-                  "src": "3254:15:5",
+                  "scope": 2552,
+                  "src": "3254:15:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3378,10 +3378,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2000,
+                    "id": 2546,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3254:7:5",
+                    "src": "3254:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3392,19 +3392,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3253:17:5"
+              "src": "3253:17:9"
             },
             "returnParameters": {
-              "id": 2005,
+              "id": 2551,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2004,
+                  "id": 2550,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2006,
-                  "src": "3294:4:5",
+                  "scope": 2552,
+                  "src": "3294:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3412,10 +3412,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2003,
+                    "id": 2549,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3294:4:5",
+                    "src": "3294:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3425,10 +3425,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3293:6:5"
+              "src": "3293:6:9"
             },
-            "scope": 2091,
-            "src": "3236:64:5",
+            "scope": 2637,
+            "src": "3236:64:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -3436,23 +3436,23 @@
           {
             "body": null,
             "documentation": "@notice checks if account is a certifier\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2013,
+            "id": 2559,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isCertifier",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2009,
+              "id": 2555,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2008,
+                  "id": 2554,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2013,
-                  "src": "3491:23:5",
+                  "scope": 2559,
+                  "src": "3491:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3460,10 +3460,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2007,
+                    "id": 2553,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3491:7:5",
+                    "src": "3491:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3474,19 +3474,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3490:25:5"
+              "src": "3490:25:9"
             },
             "returnParameters": {
-              "id": 2012,
+              "id": 2558,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2011,
+                  "id": 2557,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2013,
-                  "src": "3539:4:5",
+                  "scope": 2559,
+                  "src": "3539:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3494,10 +3494,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2010,
+                    "id": 2556,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3539:4:5",
+                    "src": "3539:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3507,10 +3507,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3538:6:5"
+              "src": "3538:6:9"
             },
-            "scope": 2091,
-            "src": "3470:75:5",
+            "scope": 2637,
+            "src": "3470:75:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -3518,23 +3518,23 @@
           {
             "body": null,
             "documentation": "@notice checks if account is a technician\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2020,
+            "id": 2566,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isTechnician",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2016,
+              "id": 2562,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2015,
+                  "id": 2561,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2020,
-                  "src": "3738:23:5",
+                  "scope": 2566,
+                  "src": "3738:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3542,10 +3542,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2014,
+                    "id": 2560,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3738:7:5",
+                    "src": "3738:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3556,19 +3556,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3737:25:5"
+              "src": "3737:25:9"
             },
             "returnParameters": {
-              "id": 2019,
+              "id": 2565,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2018,
+                  "id": 2564,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2020,
-                  "src": "3786:4:5",
+                  "scope": 2566,
+                  "src": "3786:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3576,10 +3576,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2017,
+                    "id": 2563,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3786:4:5",
+                    "src": "3786:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3589,10 +3589,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3785:6:5"
+              "src": "3785:6:9"
             },
-            "scope": 2091,
-            "src": "3716:76:5",
+            "scope": 2637,
+            "src": "3716:76:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -3600,23 +3600,23 @@
           {
             "body": null,
             "documentation": "@notice checks if account is a taster\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2027,
+            "id": 2573,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isTaster",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2023,
+              "id": 2569,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2022,
+                  "id": 2568,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2027,
-                  "src": "3977:23:5",
+                  "scope": 2573,
+                  "src": "3977:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3624,10 +3624,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2021,
+                    "id": 2567,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3977:7:5",
+                    "src": "3977:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3638,19 +3638,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3976:25:5"
+              "src": "3976:25:9"
             },
             "returnParameters": {
-              "id": 2026,
+              "id": 2572,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2025,
+                  "id": 2571,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2027,
-                  "src": "4025:4:5",
+                  "scope": 2573,
+                  "src": "4025:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3658,10 +3658,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2024,
+                    "id": 2570,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4025:4:5",
+                    "src": "4025:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3671,10 +3671,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4024:6:5"
+              "src": "4024:6:9"
             },
-            "scope": 2091,
-            "src": "3959:72:5",
+            "scope": 2637,
+            "src": "3959:72:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -3682,23 +3682,23 @@
           {
             "body": null,
             "documentation": "@notice checks if account is a validator\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2034,
+            "id": 2580,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isValidator",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2030,
+              "id": 2576,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2029,
+                  "id": 2575,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2034,
-                  "src": "4222:23:5",
+                  "scope": 2580,
+                  "src": "4222:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3706,10 +3706,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2028,
+                    "id": 2574,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4222:7:5",
+                    "src": "4222:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3720,19 +3720,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4221:25:5"
+              "src": "4221:25:9"
             },
             "returnParameters": {
-              "id": 2033,
+              "id": 2579,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2032,
+                  "id": 2578,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2034,
-                  "src": "4270:4:5",
+                  "scope": 2580,
+                  "src": "4270:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3740,10 +3740,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2031,
+                    "id": 2577,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4270:4:5",
+                    "src": "4270:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3753,10 +3753,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4269:6:5"
+              "src": "4269:6:9"
             },
-            "scope": 2091,
-            "src": "4201:75:5",
+            "scope": 2637,
+            "src": "4201:75:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -3764,23 +3764,23 @@
           {
             "body": null,
             "documentation": "@notice checks if account is a benefit\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2041,
+            "id": 2587,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isBenefit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2037,
+              "id": 2583,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2036,
+                  "id": 2582,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2041,
-                  "src": "4463:23:5",
+                  "scope": 2587,
+                  "src": "4463:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3788,10 +3788,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2035,
+                    "id": 2581,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4463:7:5",
+                    "src": "4463:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3802,19 +3802,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4462:25:5"
+              "src": "4462:25:9"
             },
             "returnParameters": {
-              "id": 2040,
+              "id": 2586,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2039,
+                  "id": 2585,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2041,
-                  "src": "4511:4:5",
+                  "scope": 2587,
+                  "src": "4511:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3822,10 +3822,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2038,
+                    "id": 2584,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4511:4:5",
+                    "src": "4511:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3835,10 +3835,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4510:6:5"
+              "src": "4510:6:9"
             },
-            "scope": 2091,
-            "src": "4444:73:5",
+            "scope": 2637,
+            "src": "4444:73:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -3846,23 +3846,23 @@
           {
             "body": null,
             "documentation": "@notice checks if account is a roaster\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2048,
+            "id": 2594,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "isRoaster",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2044,
+              "id": 2590,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2043,
+                  "id": 2589,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2048,
-                  "src": "4704:23:5",
+                  "scope": 2594,
+                  "src": "4704:23:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3870,10 +3870,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2042,
+                    "id": 2588,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4704:7:5",
+                    "src": "4704:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3884,19 +3884,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4703:25:5"
+              "src": "4703:25:9"
             },
             "returnParameters": {
-              "id": 2047,
+              "id": 2593,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2046,
+                  "id": 2592,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2048,
-                  "src": "4752:4:5",
+                  "scope": 2594,
+                  "src": "4752:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3904,10 +3904,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2045,
+                    "id": 2591,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4752:4:5",
+                    "src": "4752:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3917,10 +3917,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4751:6:5"
+              "src": "4751:6:9"
             },
-            "scope": 2091,
-            "src": "4685:73:5",
+            "scope": 2637,
+            "src": "4685:73:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -3928,21 +3928,21 @@
           {
             "anonymous": false,
             "documentation": "@notice Logs when an Actor is created. ",
-            "id": 2054,
+            "id": 2600,
             "name": "LogAddActor",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2053,
+              "id": 2599,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2050,
+                  "id": 2596,
                   "indexed": false,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2054,
-                  "src": "4841:21:5",
+                  "scope": 2600,
+                  "src": "4841:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3950,10 +3950,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2049,
+                    "id": 2595,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4841:7:5",
+                    "src": "4841:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3965,12 +3965,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2052,
+                  "id": 2598,
                   "indexed": false,
                   "name": "_role",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2054,
-                  "src": "4872:13:5",
+                  "scope": 2600,
+                  "src": "4872:13:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3978,10 +3978,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2051,
+                    "id": 2597,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4872:7:5",
+                    "src": "4872:7:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -3991,28 +3991,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4831:60:5"
+              "src": "4831:60:9"
             },
-            "src": "4814:78:5"
+            "src": "4814:78:9"
           },
           {
             "anonymous": false,
             "documentation": "@notice Logs when a cooperative creates an Actor. ",
-            "id": 2062,
+            "id": 2608,
             "name": "LogCooperativeAddActor",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2061,
+              "id": 2607,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2056,
+                  "id": 2602,
                   "indexed": false,
                   "name": "_cooperativeAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2062,
-                  "src": "4997:27:5",
+                  "scope": 2608,
+                  "src": "4997:27:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4020,10 +4020,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2055,
+                    "id": 2601,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4997:7:5",
+                    "src": "4997:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4035,12 +4035,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2058,
+                  "id": 2604,
                   "indexed": false,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2062,
-                  "src": "5034:21:5",
+                  "scope": 2608,
+                  "src": "5034:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4048,10 +4048,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2057,
+                    "id": 2603,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5034:7:5",
+                    "src": "5034:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4063,12 +4063,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2060,
+                  "id": 2606,
                   "indexed": false,
                   "name": "_role",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2062,
-                  "src": "5065:13:5",
+                  "scope": 2608,
+                  "src": "5065:13:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4076,10 +4076,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2059,
+                    "id": 2605,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5065:7:5",
+                    "src": "5065:7:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -4089,28 +4089,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4987:97:5"
+              "src": "4987:97:9"
             },
-            "src": "4959:126:5"
+            "src": "4959:126:9"
           },
           {
             "anonymous": false,
             "documentation": "@notice Logs when an Actor is destroyed. ",
-            "id": 2066,
+            "id": 2612,
             "name": "LogDestroyActor",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2065,
+              "id": 2611,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2064,
+                  "id": 2610,
                   "indexed": false,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2066,
-                  "src": "5174:21:5",
+                  "scope": 2612,
+                  "src": "5174:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4118,10 +4118,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2063,
+                    "id": 2609,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5174:7:5",
+                    "src": "5174:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4132,28 +4132,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5164:37:5"
+              "src": "5164:37:9"
             },
-            "src": "5143:59:5"
+            "src": "5143:59:9"
           },
           {
             "anonymous": false,
             "documentation": "@notice Logs when a cooperative destroys an Actor. ",
-            "id": 2072,
+            "id": 2618,
             "name": "LogCooperativeDestroyActor",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2071,
+              "id": 2617,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2068,
+                  "id": 2614,
                   "indexed": false,
                   "name": "_cooperativeAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2072,
-                  "src": "5312:27:5",
+                  "scope": 2618,
+                  "src": "5312:27:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4161,10 +4161,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2067,
+                    "id": 2613,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5312:7:5",
+                    "src": "5312:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4176,12 +4176,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2070,
+                  "id": 2616,
                   "indexed": false,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2072,
-                  "src": "5349:21:5",
+                  "scope": 2618,
+                  "src": "5349:21:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4189,10 +4189,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2069,
+                    "id": 2615,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5349:7:5",
+                    "src": "5349:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4203,28 +4203,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5302:74:5"
+              "src": "5302:74:9"
             },
-            "src": "5270:107:5"
+            "src": "5270:107:9"
           },
           {
             "anonymous": false,
             "documentation": "@notice Logs when an Actor gives permission. ",
-            "id": 2080,
+            "id": 2626,
             "name": "LogApproval",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2079,
+              "id": 2625,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2074,
+                  "id": 2620,
                   "indexed": true,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2080,
-                  "src": "5466:22:5",
+                  "scope": 2626,
+                  "src": "5466:22:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4232,10 +4232,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2073,
+                    "id": 2619,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5466:7:5",
+                    "src": "5466:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4247,12 +4247,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2076,
+                  "id": 2622,
                   "indexed": true,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2080,
-                  "src": "5498:24:5",
+                  "scope": 2626,
+                  "src": "5498:24:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4260,10 +4260,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2075,
+                    "id": 2621,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5498:7:5",
+                    "src": "5498:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4275,12 +4275,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2078,
+                  "id": 2624,
                   "indexed": false,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2080,
-                  "src": "5532:11:5",
+                  "scope": 2626,
+                  "src": "5532:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4288,10 +4288,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2077,
+                    "id": 2623,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5532:4:5",
+                    "src": "5532:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -4301,28 +4301,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5456:93:5"
+              "src": "5456:93:9"
             },
-            "src": "5439:111:5"
+            "src": "5439:111:9"
           },
           {
             "anonymous": false,
             "documentation": "@notice Logs when a Cooperative approves for an Actor. ",
-            "id": 2090,
+            "id": 2636,
             "name": "LogCooperativeApproval",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 2089,
+              "id": 2635,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2082,
+                  "id": 2628,
                   "indexed": true,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2090,
-                  "src": "5660:22:5",
+                  "scope": 2636,
+                  "src": "5660:22:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4330,10 +4330,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2081,
+                    "id": 2627,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5660:7:5",
+                    "src": "5660:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4345,12 +4345,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2084,
+                  "id": 2630,
                   "indexed": true,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2090,
-                  "src": "5692:24:5",
+                  "scope": 2636,
+                  "src": "5692:24:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4358,10 +4358,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2083,
+                    "id": 2629,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5692:7:5",
+                    "src": "5692:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4373,12 +4373,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2086,
+                  "id": 2632,
                   "indexed": false,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2090,
-                  "src": "5726:11:5",
+                  "scope": 2636,
+                  "src": "5726:11:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4386,10 +4386,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2085,
+                    "id": 2631,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5726:4:5",
+                    "src": "5726:4:9",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -4400,12 +4400,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2088,
+                  "id": 2634,
                   "indexed": false,
                   "name": "_cooperativeAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2090,
-                  "src": "5747:27:5",
+                  "scope": 2636,
+                  "src": "5747:27:9",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4413,10 +4413,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2087,
+                    "id": 2633,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5747:7:5",
+                    "src": "5747:7:9",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4427,16 +4427,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5650:130:5"
+              "src": "5650:130:9"
             },
-            "src": "5622:159:5"
+            "src": "5622:159:9"
           }
         ],
-        "scope": 2092,
-        "src": "25:5758:5"
+        "scope": 2638,
+        "src": "25:5758:9"
       }
     ],
-    "src": "0:5784:5"
+    "src": "0:5784:9"
   },
   "compiler": {
     "name": "solc",
@@ -4444,7 +4444,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.14",
-  "updatedAt": "2019-08-31T17:16:39.214Z",
+  "updatedAt": "2019-09-05T18:40:34.708Z",
   "devdoc": {
     "methods": {
       "actorExists(address)": {
