@@ -23491,7 +23491,7 @@
     }
   },
   "schemaVersion": "3.0.14",
-  "updatedAt": "2019-09-05T18:44:07.129Z",
+  "updatedAt": "2019-09-08T00:21:07.051Z",
   "devdoc": {
     "methods": {
       "actorExists(address)": {

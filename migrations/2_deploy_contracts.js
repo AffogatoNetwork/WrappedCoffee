@@ -5,6 +5,7 @@ const AffogatoCoffeeHandler = artifacts.require("AffogatoCoffeeHandler");
 
 const actorFactory = artifacts.require("StubActorFactory");
 
+const ropstenAffogatoAddress = "0x59ec33BDCa28FE0Ea38e02d0BC424Bc797846d86";
 
 module.exports = (deployer, network) => {
   if (network == "development") {
@@ -15,12 +16,16 @@ module.exports = (deployer, network) => {
       .then((erc1155Instance) => deployer.deploy(AffogatoCoffeeHandler, erc1155Instance.address))
       .then((affogatoCoffeeHandlerInstance) => deployer.deploy(AffogatoStandardCoffee, affogatoCoffeeHandlerInstance.address))
   } else if (network === "rinkeby") {
-    // deployer.deploy(erc1155, "0x51dC72631E9C730590cc93aB631E1B83B9067C0d")
-    //   .then(() => console.log("Success"));
     deployer
       .deploy(actorFactory)
       .then(() => actorFactory.deployed())
       .then(() => deployer.deploy(ERC1155, actorFactory.address))
+      .then((erc1155Instance) => deployer.deploy(AffogatoCoffeeHandler, erc1155Instance.address))
+      .then((affogatoCoffeeHandlerInstance) => deployer.deploy(AffogatoStandardCoffee, affogatoCoffeeHandlerInstance.address))
+  } else if (network == "ropsten") {
+    deployer
+      .deploy(ERC1155, ropstenAffogatoAddress)
+      .then(() => ERC1155.deployed())
       .then((erc1155Instance) => deployer.deploy(AffogatoCoffeeHandler, erc1155Instance.address))
       .then((affogatoCoffeeHandlerInstance) => deployer.deploy(AffogatoStandardCoffee, affogatoCoffeeHandlerInstance.address))
   }

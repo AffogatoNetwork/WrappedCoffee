@@ -25,20 +25,22 @@ class App extends React.Component {
       const accounts = await web3.eth.getAccounts();
       const networkId = await web3.eth.net.getId();
 
-      const deployedNetwork = ERC1155.networks[networkId];
+      const erc1155Network = ERC1155.networks[networkId];
+      const affogatoHandlerNetwork = AffogatoTokenHandler.networks[networkId];
+      const affogatoStandardCoffeeNetwork = AffogatoStandardToken.networks[networkId];
       const erc1155Contract = new web3.eth.Contract(
         ERC1155.abi,
-        deployedNetwork && deployedNetwork.address
+        erc1155Network && erc1155Network.address
       );
 
       const affogatoTokenHandler = new web3.eth.Contract(
         AffogatoTokenHandler.abi,
-        deployedNetwork && deployedNetwork.address
+        affogatoHandlerNetwork && affogatoHandlerNetwork.address
       );
 
       const standardToken = new web3.eth.Contract(
         AffogatoStandardToken.abi,
-        deployedNetwork && deployedNetwork.address
+        affogatoStandardCoffeeNetwork && affogatoStandardCoffeeNetwork.address
       );
 
       const context = this;

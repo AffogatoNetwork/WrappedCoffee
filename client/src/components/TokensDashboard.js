@@ -41,15 +41,16 @@ class TokensDashboard extends React.Component {
         // We authorize the the handler to manage our erc1155
         // await erc1155Contract.methods.setApprovalForAll(affogatoTokenHandler._address, true).send({ from: accounts[0], gasLimit: '5000000' });
         // // console.log(`address => ${affogatoTokenHandler._address} + amount => ${tokenAmount}`)
-        // await standardToken.methods.approve(affogatoTokenHandler._address, tokenAmount).send({ from: accounts[0], gasLimit: '5000000' });
-        console.log(`account => ${accounts[0]} and id => ${id}`);
+        console.log(affogatoTokenHandler._address);
+        await standardToken.methods.approve(affogatoTokenHandler._address, tokenAmount).send({ from: accounts[0], gasLimit: '5000000' });
+        // console.log(`account => ${accounts[0]} and id => ${id}`);
         const result = await affogatoTokenHandler
             .methods
             .wrapCoffee(id,
                 tokenAmount)
             .send({ from: accounts[0], gasLimit: '500000' });
 
-        console.log(result);
+        // console.log(result);
     }
 
     handleAmountChange = async (event) => {

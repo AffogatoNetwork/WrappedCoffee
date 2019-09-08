@@ -7056,6 +7056,103 @@
     "version": "0.5.9+commit.e560f70d.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {
+        "0x15300f9f4c423ea2b40f511cd2487c8e68701504ac11a262f87639abadee3108": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_wrappedCoffeeToken",
+              "type": "address"
+            }
+          ],
+          "name": "LogSetNFTTokenContractAddress",
+          "type": "event",
+          "signature": "0x15300f9f4c423ea2b40f511cd2487c8e68701504ac11a262f87639abadee3108"
+        },
+        "0x130021b718e0a50e754908209a4b0b426d555e03da9cd8bca4d525ff406fa9b3": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_standardCoffeeContract",
+              "type": "address"
+            }
+          ],
+          "name": "LogSetASCAddress",
+          "type": "event",
+          "signature": "0x130021b718e0a50e754908209a4b0b426d555e03da9cd8bca4d525ff406fa9b3"
+        },
+        "0x03d4acb5700b211b6e30997fffb359618a04a26f0d02f2d5c328fd6d39f8fdb9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_tokenOwner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_tokenId",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LogWrapCoffee",
+          "type": "event",
+          "signature": "0x03d4acb5700b211b6e30997fffb359618a04a26f0d02f2d5c328fd6d39f8fdb9"
+        },
+        "0xd8a8672f6e97e2290fe2ae43a2b74178eaafd9fcc0d652d8963087d8e88a0a62": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_tokenOwner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_tokenId",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LogUnwrapCoffee",
+          "type": "event",
+          "signature": "0xd8a8672f6e97e2290fe2ae43a2b74178eaafd9fcc0d652d8963087d8e88a0a62"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event",
+          "signature": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
+        }
+      },
+      "links": {},
+      "address": "0xbB9199F63b28f354D1060e589D194031Fc358481",
+      "transactionHash": "0xcb52d3d8ccb73de48a748bb7a716e0dfe17a09137e659b85f95b4b36e3395dc3"
+    },
     "4": {
       "events": {
         "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
@@ -7155,7 +7252,7 @@
     }
   },
   "schemaVersion": "3.0.14",
-  "updatedAt": "2019-09-05T18:44:07.166Z",
+  "updatedAt": "2019-09-08T00:21:07.089Z",
   "devdoc": {
     "methods": {
       "isOwner()": {
