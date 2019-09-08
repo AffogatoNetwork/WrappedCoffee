@@ -100,11 +100,8 @@ class TokensDashboard extends React.Component {
         this.setState({ showMortgageModal: false });
         const { web3, accounts, affogatoTokenHandler, tokenAmount, id, erc1155Contract, standardToken } = this.state;
         // We authorize the the handler to manage our erc1155
-        // await erc1155Contract.methods.setApprovalForAll(affogatoTokenHandler._address, true).send({ from: accounts[0], gasLimit: '5000000' });
-        // // console.log(`address => ${affogatoTokenHandler._address} + amount => ${tokenAmount}`)
-        console.log(affogatoTokenHandler._address);
+        await erc1155Contract.methods.setApprovalForAll(affogatoTokenHandler._address, true).send({ from: accounts[0], gasLimit: '5000000' });
         await standardToken.methods.approve(affogatoTokenHandler._address, tokenAmount).send({ from: accounts[0], gasLimit: '5000000' });
-        // console.log(`account => ${accounts[0]} and id => ${id}`);
         const result = await affogatoTokenHandler
             .methods
             .wrapCoffee(id,
