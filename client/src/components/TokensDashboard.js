@@ -1,7 +1,19 @@
 import React from 'react';
 import axios from 'axios';
 
-import { CardColumns, Card, Button, ButtonGroup, Modal, Form, InputGroup, FormControl } from 'react-bootstrap';
+import {
+    CardColumns,
+    Card,
+    Button,
+    ButtonGroup,
+    Modal,
+    Form,
+    InputGroup,
+    FormControl,
+    Container
+} from 'react-bootstrap';
+
+import BigNumber from 'bignumber.js';
 
 class TokensDashboard extends React.Component {
     constructor(props) {
@@ -21,6 +33,54 @@ class TokensDashboard extends React.Component {
             standardToken,
             showMortgageModal: false,
         }
+
+        erc1155Contract.events.TransferSingle({
+            fromBlock: 'latest',
+            filter: {
+                _to: accounts[0],
+            }
+        }, (err, event) => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+
+            const { balances, tokens } = this.state;
+            const tokenId = event.returnValues['_id'];
+            const amount = event.returnValues['_value'];
+            if (tokens) {
+                const indexOfToken = tokens.findIndex((e) => e['id'] == tokenId);
+                if (indexOfToken != -1) {
+                    const newValue = balances[indexOfToken].plus(amount);
+                    balances[indexOfToken] = newValue;
+                    this.setState({ balances });
+                }
+            }
+        })
+
+        erc1155Contract.events.TransferSingle({
+            fromBlock: 'latest', filter: {
+                _from: accounts[0]
+            }
+        }, (err, event) => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+
+            const tokenId = event.returnValues['_id'];
+            const amount = event.returnValues['_value'];
+
+            const { tokens, balances } = this.state;
+            if (tokens) {
+                const indexOfToken = tokens.findIndex((e) => e['id'] == tokenId);
+                if (indexOfToken != -1) {
+                    const newValue = balances[indexOfToken].minus(amount);
+                    balances[indexOfToken] = newValue;
+                    this.setState({ balances });
+                }
+            }
+        });
     }
 
     handleMortgageCoffeeClick = async (event, id) => {
@@ -37,6 +97,7 @@ class TokensDashboard extends React.Component {
     }
 
     handleSendMortgageTransaction = async () => {
+        this.setState({ showMortgageModal: false });
         const { web3, accounts, affogatoTokenHandler, tokenAmount, id, erc1155Contract, standardToken } = this.state;
         // We authorize the the handler to manage our erc1155
         // await erc1155Contract.methods.setApprovalForAll(affogatoTokenHandler._address, true).send({ from: accounts[0], gasLimit: '5000000' });
@@ -49,8 +110,6 @@ class TokensDashboard extends React.Component {
             .wrapCoffee(id,
                 tokenAmount)
             .send({ from: accounts[0], gasLimit: '500000' });
-
-        // console.log(result);
     }
 
     handleAmountChange = async (event) => {
@@ -75,7 +134,7 @@ class TokensDashboard extends React.Component {
         );
         const balances = await Promise.all(tokenIds.map((id) => erc1155Contract.methods.balanceOf(accounts[0], id).call({ from: accounts[0] })));
         const tokens = tokensResponses.map((response, index) => Object.assign(response.data, { id: tokenIds[index] }));
-        this.setState({ tokens, balances });
+        this.setState({ tokens, balances: balances.map((e) => new BigNumber(e)) });
     }
 
     render() {
@@ -84,8 +143,12 @@ class TokensDashboard extends React.Component {
             return (<a>Loading tokens...</a>);
         }
 
+        if (tokens.length == 0) {
+            return (<a>No tokens at this time...</a>)
+        }
+
         return (
-            <div>
+            <Container>
                 <CardColumns>
                     {this.buildCards(tokens, balances)}
                 </CardColumns>
@@ -118,7 +181,7 @@ class TokensDashboard extends React.Component {
                             </Button>
                     </Modal.Footer>
                 </Modal>
-            </div>
+            </Container>
         );
     }
 
@@ -128,9 +191,9 @@ class TokensDashboard extends React.Component {
                 <Card.Img variant="top" src={token.image} />
                 <Card.Header>{token.name}</Card.Header>
                 <Card.Body>
-                    <Card.Title>{balances[index]}</Card.Title>
+                    <Card.Title>{balances[index].toString()}</Card.Title>
                     <ButtonGroup vertical>
-                        <Button variant="primary" >Sell Coffee</Button>
+                        <Button variant="primary" disabled>Sell Coffee</Button>
                         <Button variant="info" onClick={(event) => this.handleMortgageCoffeeClick(event, token.id)}>Mortgage Coffee</Button>
                     </ButtonGroup>
                 </Card.Body>
