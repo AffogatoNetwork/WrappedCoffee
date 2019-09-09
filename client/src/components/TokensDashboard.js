@@ -32,6 +32,10 @@ class TokensDashboard extends React.Component {
             web3,
             accounts,
             standardToken,
+            tokens: {
+                approvedTokens: [],
+                unapprovedTokens: [],
+            },
             showMortgageModal: false,
         }
 
@@ -49,14 +53,30 @@ class TokensDashboard extends React.Component {
             const { balances, tokens } = this.state;
             const tokenId = event.returnValues['_id'];
             const amount = event.returnValues['_value'];
-            if (tokens) {
-                const indexOfToken = tokens.findIndex((e) => e['id'] == tokenId);
-                if (indexOfToken != -1) {
-                    const newValue = balances[indexOfToken].plus(amount);
-                    balances[indexOfToken] = newValue;
-                    this.setState({ balances });
-                }
+
+            let { unapprovedTokens, approvedTokens } = tokens;
+
+            let indexOfToken = approvedTokens.findIndex((element) => element['id'] == tokenId);
+            if (indexOfToken != -1) {
+                const newValue = balances[indexOfToken].plus(amount);
+                balances[indexOfToken] = newValue;
             }
+
+            indexOfToken = unapprovedTokens.findIndex((element) => element['id'] == tokenId);
+            if (indexOfToken != -1) {
+                balances.push(amount);
+                const token = unapprovedTokens[indexOfToken];
+                unapprovedTokens = unapprovedTokens.filter((e, index) => index != indexOfToken);
+                approvedTokens.push(token);
+            }
+
+            this.setState({
+                balances,
+                tokens: {
+                    approvedTokens,
+                    unapprovedTokens
+                }
+            })
         })
 
         erc1155Contract.events.TransferSingle({
@@ -73,8 +93,8 @@ class TokensDashboard extends React.Component {
             const amount = event.returnValues['_value'];
 
             const { tokens, balances } = this.state;
-            if (tokens) {
-                const indexOfToken = tokens.findIndex((e) => e['id'] == tokenId);
+            if (tokens.approvedTokens) {
+                const indexOfToken = tokens.approvedTokens.findIndex((e) => e['id'] == tokenId);
                 if (indexOfToken != -1) {
                     const newValue = balances[indexOfToken].minus(amount);
                     balances[indexOfToken] = newValue;
@@ -131,7 +151,6 @@ class TokensDashboard extends React.Component {
             ipfsHashes.map((ipfsHash) => axios.get(`${IPFS_GATEWAY_BASE}${ipfsHash}`))
         );
 
-
         const balances = await Promise.all(approvedTokenIds.map((id) => erc1155Contract.methods.balanceOf(accounts[0], id).call({ from: accounts[0] })));
         const approvedTokens = approvedTokenResponses.map((response, index) => Object.assign(response.data, { id: approvedTokenIds[index] }));
 
@@ -139,14 +158,11 @@ class TokensDashboard extends React.Component {
         const unapprovedTokenIds = await erc1155Contract.methods.getUnapprovedTokensWithBalance(accounts[0]).call({ from: accounts[0] });
         const unapprovedTokenPromises = unapprovedTokenIds.map((id) => erc1155Contract.methods.uris(id).call({ from: accounts[0] }));
         const unapprovedipfsHashes = await Promise.all(unapprovedTokenPromises);
-        console.log(unapprovedipfsHashes);
 
         const unapprovedTokenResponses = await Promise.all(
             unapprovedipfsHashes.map((ipfsHash) => axios.get(`${IPFS_GATEWAY_BASE}${ipfsHash}`))
         );
-        console.log(JSON.stringify(unapprovedTokenResponses))
         const unapprovedTokens = unapprovedTokenResponses.map((response, index) => Object.assign(response.data, { id: unapprovedTokenIds[index] }));
-        console.log(unapprovedTokens)
         this.setState({ tokens: { approvedTokens, unapprovedTokens }, balances: balances.map((e) => new BigNumber(e)) });
     }
 
