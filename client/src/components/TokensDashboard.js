@@ -7,13 +7,14 @@ import {
     Button,
     ButtonGroup,
     Modal,
-    Form,
     InputGroup,
     FormControl,
     Container
 } from 'react-bootstrap';
 
 import BigNumber from 'bignumber.js';
+
+const IPFS_GATEWAY_BASE = "https://ipfs.io/ipfs/";
 
 class TokensDashboard extends React.Component {
     constructor(props) {
@@ -96,6 +97,12 @@ class TokensDashboard extends React.Component {
         this.setState({ showMortgageModal: false })
     }
 
+    handleApproveTokenClick = async (event, id) => {
+        event.preventDefault();
+        const { web3, accounts, erc1155Contract } = this.state;
+        await erc1155Contract.methods.approveTokenCreation(id).send({ from: accounts[0] });
+    }
+
     handleSendMortgageTransaction = async () => {
         this.setState({ showMortgageModal: false });
         const { web3, accounts, affogatoTokenHandler, tokenAmount, id, erc1155Contract, standardToken } = this.state;
@@ -116,38 +123,49 @@ class TokensDashboard extends React.Component {
 
     async componentDidMount() {
         const { accounts, erc1155Contract } = this.state;
-        const tokenIds = await erc1155Contract.methods.getTokensWithBalance(accounts[0]).call({ from: accounts[0] });
-        const promises = tokenIds.map((id) => erc1155Contract.methods.uris(id).call({ from: accounts[0] }));
-        const uris = await Promise.all(promises);
-        console.log(tokenIds);
-        const tokensResponses = await Promise.all(
-            uris.map((uri) => axios.get(uri, {
-                headers: {
-                    'secret-key': '$2a$10$P7M/M/O2fF2MPGg7uc1rxe7vWXtw1cM1DUwXFxaod24D0/OyiANPm',
-                    'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-                    'Access-Control-Allow-Origin': "*",
-                }
-            }))
+        const approvedTokenIds = await erc1155Contract.methods.getTokensWithBalance(accounts[0]).call({ from: accounts[0] });
+        const approvedTokenPromises = approvedTokenIds.map((id) => erc1155Contract.methods.uris(id).call({ from: accounts[0] }));
+        const ipfsHashes = await Promise.all(approvedTokenPromises);
+
+        const approvedTokenResponses = await Promise.all(
+            ipfsHashes.map((ipfsHash) => axios.get(`${IPFS_GATEWAY_BASE}${ipfsHash}`))
         );
-        const balances = await Promise.all(tokenIds.map((id) => erc1155Contract.methods.balanceOf(accounts[0], id).call({ from: accounts[0] })));
-        const tokens = tokensResponses.map((response, index) => Object.assign(response.data, { id: tokenIds[index] }));
-        this.setState({ tokens, balances: balances.map((e) => new BigNumber(e)) });
+
+
+        const balances = await Promise.all(approvedTokenIds.map((id) => erc1155Contract.methods.balanceOf(accounts[0], id).call({ from: accounts[0] })));
+        const approvedTokens = approvedTokenResponses.map((response, index) => Object.assign(response.data, { id: approvedTokenIds[index] }));
+
+        // Get the tokens we still need to approved
+        const unapprovedTokenIds = await erc1155Contract.methods.getUnapprovedTokensWithBalance(accounts[0]).call({ from: accounts[0] });
+        const unapprovedTokenPromises = unapprovedTokenIds.map((id) => erc1155Contract.methods.uris(id).call({ from: accounts[0] }));
+        const unapprovedipfsHashes = await Promise.all(unapprovedTokenPromises);
+        console.log(unapprovedipfsHashes);
+
+        const unapprovedTokenResponses = await Promise.all(
+            unapprovedipfsHashes.map((ipfsHash) => axios.get(`${IPFS_GATEWAY_BASE}${ipfsHash}`))
+        );
+        console.log(JSON.stringify(unapprovedTokenResponses))
+        const unapprovedTokens = unapprovedTokenResponses.map((response, index) => Object.assign(response.data, { id: unapprovedTokenIds[index] }));
+        console.log(unapprovedTokens)
+        this.setState({ tokens: { approvedTokens, unapprovedTokens }, balances: balances.map((e) => new BigNumber(e)) });
     }
 
     render() {
         const { tokens, balances, showMortgageModal } = this.state;
-        if (!tokens) {
-            return (<a>Loading tokens...</a>);
-        }
-
-        if (tokens.length == 0) {
-            return (<a>No tokens at this time...</a>)
-        }
-
-        return (
-            <Container>
+        let content;
+        if (!tokens || !tokens.approvedTokens) {
+            content = (<a>Loading tokens...</a>);
+        } else if (tokens.approvedTokens.length == 0 && tokens.unapprovedTokens.length == 0) {
+            content = (<a>No tokens at this time...</a>)
+        } else {
+            content = (<div>
+                <h1>Approved Tokens</h1>
                 <CardColumns>
-                    {this.buildCards(tokens, balances)}
+                    {this.buildApprovedTokenCards(tokens.approvedTokens, balances)}
+                </CardColumns>
+                <h1>Unapproved Tokens</h1>
+                <CardColumns>
+                    {this.buildUnapprovedTokenCards(tokens.unapprovedTokens)}
                 </CardColumns>
                 <Modal show={showMortgageModal} onHide={this.handleModalClose}>
                     <Modal.Header closeButton>
@@ -172,17 +190,23 @@ class TokensDashboard extends React.Component {
                     <Modal.Footer>
                         <Button variant="secondary" onClick={this.handleModalClose}>
                             Cancel
-                            </Button>
+                        </Button>
                         <Button variant="primary" onClick={this.handleSendMortgageTransaction}>
                             Mortgage
-                            </Button>
+                        </Button>
                     </Modal.Footer>
                 </Modal>
+            </div>)
+        }
+
+        return (
+            <Container>
+                {content}
             </Container>
         );
     }
 
-    buildCards(tokens, balances) {
+    buildApprovedTokenCards(tokens, balances) {
         const cards = tokens.map((token, index) => (
             <Card key={token.id} style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={token.image} />
@@ -192,6 +216,22 @@ class TokensDashboard extends React.Component {
                     <ButtonGroup vertical>
                         <Button variant="primary" disabled>Sell Coffee</Button>
                         <Button variant="info" onClick={(event) => this.handleMortgageCoffeeClick(event, token.id)}>Mortgage Coffee</Button>
+                    </ButtonGroup>
+                </Card.Body>
+            </Card>
+        ));
+
+        return cards;
+    }
+
+    buildUnapprovedTokenCards(tokens) {
+        const cards = tokens.map((token, index) => (
+            <Card key={token.id} style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={token.image} />
+                <Card.Header>{token.name}</Card.Header>
+                <Card.Body>
+                    <ButtonGroup vertical>
+                        <Button variant="primary" onClick={(event) => this.handleApproveTokenClick(event, token.id)}>Approve</Button>
                     </ButtonGroup>
                 </Card.Body>
             </Card>

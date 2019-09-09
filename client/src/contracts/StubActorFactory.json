@@ -462,14 +462,14 @@
     "absolutePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/StubActorFactory.sol",
     "exportedSymbols": {
       "StubActorFactory": [
-        2468
+        2556
       ]
     },
-    "id": 2469,
+    "id": 2557,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2294,
+        "id": 2382,
         "literals": [
           "solidity",
           "^",
@@ -482,10 +482,10 @@
       {
         "absolutePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/interfaces/IActor.sol",
         "file": "./interfaces/IActor.sol",
-        "id": 2295,
+        "id": 2383,
         "nodeType": "ImportDirective",
-        "scope": 2469,
-        "sourceUnit": 2638,
+        "scope": 2557,
+        "sourceUnit": 2726,
         "src": "25:33:8",
         "symbolAliases": [],
         "unitAlias": ""
@@ -496,38 +496,38 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2296,
+              "id": 2384,
               "name": "IActor",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2637,
+              "referencedDeclaration": 2725,
               "src": "89:6:8",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IActor_$2637",
+                "typeIdentifier": "t_contract$_IActor_$2725",
                 "typeString": "contract IActor"
               }
             },
-            "id": 2297,
+            "id": 2385,
             "nodeType": "InheritanceSpecifier",
             "src": "89:6:8"
           }
         ],
         "contractDependencies": [
-          2637
+          2725
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2468,
+        "id": 2556,
         "linearizedBaseContracts": [
-          2468,
-          2637
+          2556,
+          2725
         ],
         "name": "StubActorFactory",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2306,
+              "id": 2394,
               "nodeType": "Block",
               "src": "364:32:8",
               "statements": [
@@ -535,7 +535,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "4641524d4552",
-                    "id": 2304,
+                    "id": 2392,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -550,30 +550,30 @@
                     },
                     "value": "FARMER"
                   },
-                  "functionReturnParameters": 2303,
-                  "id": 2305,
+                  "functionReturnParameters": 2391,
+                  "id": 2393,
                   "nodeType": "Return",
                   "src": "374:15:8"
                 }
               ]
             },
             "documentation": "@notice Gets the type of the account.\n@param _owner address of the owner.\n@return returns a bytes32 with the type of account or empty if there is no account",
-            "id": 2307,
+            "id": 2395,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getAccountType",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2300,
+              "id": 2388,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2299,
+                  "id": 2387,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2307,
+                  "scope": 2395,
                   "src": "316:14:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -582,7 +582,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2298,
+                    "id": 2386,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "316:7:8",
@@ -599,15 +599,15 @@
               "src": "315:16:8"
             },
             "returnParameters": {
-              "id": 2303,
+              "id": 2391,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2302,
+                  "id": 2390,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2307,
+                  "scope": 2395,
                   "src": "355:7:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -616,7 +616,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2301,
+                    "id": 2389,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "355:7:8",
@@ -631,15 +631,15 @@
               ],
               "src": "354:9:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "292:104:8",
             "stateMutability": "view",
-            "superFunction": 2477,
+            "superFunction": 2565,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2314,
+              "id": 2402,
               "nodeType": "Block",
               "src": "612:37:8",
               "statements": [
@@ -647,7 +647,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "434f4f5045524154495645",
-                    "id": 2312,
+                    "id": 2400,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -662,36 +662,36 @@
                     },
                     "value": "COOPERATIVE"
                   },
-                  "functionReturnParameters": 2311,
-                  "id": 2313,
+                  "functionReturnParameters": 2399,
+                  "id": 2401,
                   "nodeType": "Return",
                   "src": "622:20:8"
                 }
               ]
             },
             "documentation": "@notice Gets the type of the sender account.\n@return returns a bytes32 with the type of account or empty if there is no account",
-            "id": 2315,
+            "id": 2403,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getSenderRole",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2308,
+              "id": 2396,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "577:2:8"
             },
             "returnParameters": {
-              "id": 2311,
+              "id": 2399,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2310,
+                  "id": 2398,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2315,
+                  "scope": 2403,
                   "src": "603:7:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -700,7 +700,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2309,
+                    "id": 2397,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "603:7:8",
@@ -715,15 +715,15 @@
               ],
               "src": "602:9:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "555:94:8",
             "stateMutability": "view",
-            "superFunction": 2482,
+            "superFunction": 2570,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2324,
+              "id": 2412,
               "nodeType": "Block",
               "src": "880:28:8",
               "statements": [
@@ -731,7 +731,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2322,
+                    "id": 2410,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -746,30 +746,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2321,
-                  "id": 2323,
+                  "functionReturnParameters": 2409,
+                  "id": 2411,
                   "nodeType": "Return",
                   "src": "890:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if an actor exists\n@param _actorAddress address of actor to check\n@return true if is exists false if not",
-            "id": 2325,
+            "id": 2413,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "actorExists",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2318,
+              "id": 2406,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2317,
+                  "id": 2405,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2325,
+                  "scope": 2413,
                   "src": "829:21:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -778,7 +778,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2316,
+                    "id": 2404,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "829:7:8",
@@ -795,15 +795,15 @@
               "src": "828:23:8"
             },
             "returnParameters": {
-              "id": 2321,
+              "id": 2409,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2320,
+                  "id": 2408,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2325,
+                  "scope": 2413,
                   "src": "874:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -812,7 +812,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2319,
+                    "id": 2407,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "874:4:8",
@@ -827,15 +827,15 @@
               ],
               "src": "873:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "808:100:8",
             "stateMutability": "view",
-            "superFunction": 2489,
+            "superFunction": 2577,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2336,
+              "id": 2424,
               "nodeType": "Block",
               "src": "1269:28:8",
               "statements": [
@@ -843,7 +843,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2334,
+                    "id": 2422,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -858,30 +858,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2333,
-                  "id": 2335,
+                  "functionReturnParameters": 2421,
+                  "id": 2423,
                   "nodeType": "Return",
                   "src": "1279:11:8"
                 }
               ]
             },
             "documentation": "@notice Checks if a user has permission from another user.\n@param _allower address of the allower.\n@param _allowed address of the actor to check if has permission.\n@return returns true if _allowed has permission, false otherwise.",
-            "id": 2337,
+            "id": 2425,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isAllowed",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2330,
+              "id": 2418,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2327,
+                  "id": 2415,
                   "name": "_allower",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2337,
+                  "scope": 2425,
                   "src": "1204:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -890,7 +890,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2326,
+                    "id": 2414,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1204:7:8",
@@ -905,10 +905,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2329,
+                  "id": 2417,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2337,
+                  "scope": 2425,
                   "src": "1222:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -917,7 +917,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2328,
+                    "id": 2416,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1222:7:8",
@@ -934,15 +934,15 @@
               "src": "1203:36:8"
             },
             "returnParameters": {
-              "id": 2333,
+              "id": 2421,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2332,
+                  "id": 2420,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2337,
+                  "scope": 2425,
                   "src": "1263:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -951,7 +951,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2331,
+                    "id": 2419,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1263:4:8",
@@ -966,36 +966,36 @@
               ],
               "src": "1262:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "1185:112:8",
             "stateMutability": "view",
-            "superFunction": 2498,
+            "superFunction": 2586,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2342,
+              "id": 2430,
               "nodeType": "Block",
               "src": "1453:24:8",
               "statements": []
             },
             "documentation": "@notice creates a new actor from sender\n@param _role type of account of the actor.",
-            "id": 2343,
+            "id": 2431,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2340,
+              "id": 2428,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2339,
+                  "id": 2427,
                   "name": "_role",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2343,
+                  "scope": 2431,
                   "src": "1429:13:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1004,7 +1004,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2338,
+                    "id": 2426,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1429:7:8",
@@ -1020,41 +1020,41 @@
               "src": "1428:15:8"
             },
             "returnParameters": {
-              "id": 2341,
+              "id": 2429,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1453:0:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "1411:66:8",
             "stateMutability": "nonpayable",
-            "superFunction": 2503,
+            "superFunction": 2591,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2350,
+              "id": 2438,
               "nodeType": "Block",
               "src": "1790:8:8",
               "statements": []
             },
             "documentation": "@notice Cooperative creates new actor\n@param _role type of account of the actor.\n@param _actorAddress address of the actor.\n@dev Only Cooperatives can call this method",
-            "id": 2351,
+            "id": 2439,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "cooperativeAddActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2348,
+              "id": 2436,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2345,
+                  "id": 2433,
                   "name": "_role",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2351,
+                  "scope": 2439,
                   "src": "1730:13:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1063,7 +1063,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2344,
+                    "id": 2432,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1730:7:8",
@@ -1077,10 +1077,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2347,
+                  "id": 2435,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2351,
+                  "scope": 2439,
                   "src": "1753:21:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1089,7 +1089,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2346,
+                    "id": 2434,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1753:7:8",
@@ -1106,20 +1106,20 @@
               "src": "1720:60:8"
             },
             "returnParameters": {
-              "id": 2349,
+              "id": 2437,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1790:0:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "1692:106:8",
             "stateMutability": "nonpayable",
-            "superFunction": 2510,
+            "superFunction": 2598,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2362,
+              "id": 2450,
               "nodeType": "Block",
               "src": "2057:28:8",
               "statements": [
@@ -1127,7 +1127,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2360,
+                    "id": 2448,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1142,30 +1142,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2359,
-                  "id": 2361,
+                  "functionReturnParameters": 2447,
+                  "id": 2449,
                   "nodeType": "Return",
                   "src": "2067:11:8"
                 }
               ]
             },
             "documentation": "@notice approves actor\n@param _allowed address of actor to assign the permission.\n@param _value value to be set.\n@return true if is success",
-            "id": 2363,
+            "id": 2451,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "approve",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2356,
+              "id": 2444,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2353,
+                  "id": 2441,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2363,
+                  "scope": 2451,
                   "src": "2002:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1174,7 +1174,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2352,
+                    "id": 2440,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2002:7:8",
@@ -1189,10 +1189,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2355,
+                  "id": 2443,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2363,
+                  "scope": 2451,
                   "src": "2020:11:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1201,7 +1201,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2354,
+                    "id": 2442,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2020:4:8",
@@ -1217,15 +1217,15 @@
               "src": "2001:31:8"
             },
             "returnParameters": {
-              "id": 2359,
+              "id": 2447,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2358,
+                  "id": 2446,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2363,
+                  "scope": 2451,
                   "src": "2051:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1234,7 +1234,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2357,
+                    "id": 2445,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2051:4:8",
@@ -1249,15 +1249,15 @@
               ],
               "src": "2050:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "1985:100:8",
             "stateMutability": "nonpayable",
-            "superFunction": 2519,
+            "superFunction": 2607,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2376,
+              "id": 2464,
               "nodeType": "Block",
               "src": "2510:28:8",
               "statements": [
@@ -1265,7 +1265,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2374,
+                    "id": 2462,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1280,30 +1280,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2373,
-                  "id": 2375,
+                  "functionReturnParameters": 2461,
+                  "id": 2463,
                   "nodeType": "Return",
                   "src": "2520:11:8"
                 }
               ]
             },
             "documentation": "@notice approves actor from cooperative\n@param _allower address of actor to giving the permission.\n@param _allowed address of actor to assign the permission.\n@param _value value to be set.\n@return true if is success\n@dev Only Cooperatives can call this method",
-            "id": 2377,
+            "id": 2465,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "cooperativeApprove",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2370,
+              "id": 2458,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2365,
+                  "id": 2453,
                   "name": "_allower",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2377,
+                  "scope": 2465,
                   "src": "2436:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1312,7 +1312,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2364,
+                    "id": 2452,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2436:7:8",
@@ -1327,10 +1327,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2367,
+                  "id": 2455,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2377,
+                  "scope": 2465,
                   "src": "2454:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1339,7 +1339,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2366,
+                    "id": 2454,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2454:7:8",
@@ -1354,10 +1354,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2369,
+                  "id": 2457,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2377,
+                  "scope": 2465,
                   "src": "2472:11:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1366,7 +1366,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2368,
+                    "id": 2456,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2472:4:8",
@@ -1382,15 +1382,15 @@
               "src": "2435:49:8"
             },
             "returnParameters": {
-              "id": 2373,
+              "id": 2461,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2372,
+                  "id": 2460,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2377,
+                  "scope": 2465,
                   "src": "2504:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1399,7 +1399,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2371,
+                    "id": 2459,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2504:4:8",
@@ -1414,68 +1414,68 @@
               ],
               "src": "2503:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "2408:130:8",
             "stateMutability": "nonpayable",
-            "superFunction": 2530,
+            "superFunction": 2618,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2380,
+              "id": 2468,
               "nodeType": "Block",
               "src": "2664:2:8",
               "statements": []
             },
             "documentation": "@notice destroys an actor\n@dev only actor can destroy account",
-            "id": 2381,
+            "id": 2469,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "destroyActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2378,
+              "id": 2466,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2652:2:8"
             },
             "returnParameters": {
-              "id": 2379,
+              "id": 2467,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2664:0:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "2631:35:8",
             "stateMutability": "nonpayable",
-            "superFunction": 2533,
+            "superFunction": 2621,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2386,
+              "id": 2474,
               "nodeType": "Block",
               "src": "2927:2:8",
               "statements": []
             },
             "documentation": "@notice destroys an actor\n@param _actorAddress address of the actor.\n@dev Only Cooperatives can call this method\n@dev only actor can destroy account",
-            "id": 2387,
+            "id": 2475,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "cooperativeDestroyActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2384,
+              "id": 2472,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2383,
+                  "id": 2471,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2387,
+                  "scope": 2475,
                   "src": "2895:21:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1484,7 +1484,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2382,
+                    "id": 2470,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2895:7:8",
@@ -1501,20 +1501,20 @@
               "src": "2894:23:8"
             },
             "returnParameters": {
-              "id": 2385,
+              "id": 2473,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2927:0:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "2862:67:8",
             "stateMutability": "nonpayable",
-            "superFunction": 2538,
+            "superFunction": 2626,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2396,
+              "id": 2484,
               "nodeType": "Block",
               "src": "3262:28:8",
               "statements": [
@@ -1522,7 +1522,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2394,
+                    "id": 2482,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1537,30 +1537,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2393,
-                  "id": 2395,
+                  "functionReturnParameters": 2481,
+                  "id": 2483,
                   "nodeType": "Return",
                   "src": "3272:11:8"
                 }
               ]
             },
             "documentation": "@notice Returns true if the address passed to it belongs to a cooperative account\n@param _cooperative The address to be checked\n@return true if the address passed to the function belongs to a cooperative false otherwise",
-            "id": 2397,
+            "id": 2485,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isCooperative",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2390,
+              "id": 2478,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2389,
+                  "id": 2477,
                   "name": "_cooperative",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2397,
+                  "scope": 2485,
                   "src": "3211:20:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1569,7 +1569,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2388,
+                    "id": 2476,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3211:7:8",
@@ -1586,15 +1586,15 @@
               "src": "3210:22:8"
             },
             "returnParameters": {
-              "id": 2393,
+              "id": 2481,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2392,
+                  "id": 2480,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2397,
+                  "scope": 2485,
                   "src": "3256:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1603,7 +1603,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2391,
+                    "id": 2479,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "3256:4:8",
@@ -1618,15 +1618,15 @@
               ],
               "src": "3255:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "3188:102:8",
             "stateMutability": "view",
-            "superFunction": 2545,
+            "superFunction": 2633,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2406,
+              "id": 2494,
               "nodeType": "Block",
               "src": "3598:28:8",
               "statements": [
@@ -1634,7 +1634,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2404,
+                    "id": 2492,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1649,30 +1649,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2403,
-                  "id": 2405,
+                  "functionReturnParameters": 2491,
+                  "id": 2493,
                   "nodeType": "Return",
                   "src": "3608:11:8"
                 }
               ]
             },
             "documentation": "@notice Returns true if the address passed to it belongs to a farmer account\n@param _farmer The address to be checked\n@return true if the address passed to the function belongs to a farmer false otherwise",
-            "id": 2407,
+            "id": 2495,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2400,
+              "id": 2488,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2399,
+                  "id": 2487,
                   "name": "_farmer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2407,
+                  "scope": 2495,
                   "src": "3552:15:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1681,7 +1681,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2398,
+                    "id": 2486,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3552:7:8",
@@ -1698,15 +1698,15 @@
               "src": "3551:17:8"
             },
             "returnParameters": {
-              "id": 2403,
+              "id": 2491,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2402,
+                  "id": 2490,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2407,
+                  "scope": 2495,
                   "src": "3592:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1715,7 +1715,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2401,
+                    "id": 2489,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "3592:4:8",
@@ -1730,15 +1730,15 @@
               ],
               "src": "3591:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "3534:92:8",
             "stateMutability": "view",
-            "superFunction": 2552,
+            "superFunction": 2640,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2416,
+              "id": 2504,
               "nodeType": "Block",
               "src": "3871:28:8",
               "statements": [
@@ -1746,7 +1746,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2414,
+                    "id": 2502,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1761,30 +1761,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2413,
-                  "id": 2415,
+                  "functionReturnParameters": 2501,
+                  "id": 2503,
                   "nodeType": "Return",
                   "src": "3881:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if account is a certifier\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2417,
+            "id": 2505,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isCertifier",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2410,
+              "id": 2498,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2409,
+                  "id": 2497,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2417,
+                  "scope": 2505,
                   "src": "3817:23:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1793,7 +1793,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2408,
+                    "id": 2496,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3817:7:8",
@@ -1810,15 +1810,15 @@
               "src": "3816:25:8"
             },
             "returnParameters": {
-              "id": 2413,
+              "id": 2501,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2412,
+                  "id": 2500,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2417,
+                  "scope": 2505,
                   "src": "3865:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1827,7 +1827,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2411,
+                    "id": 2499,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "3865:4:8",
@@ -1842,15 +1842,15 @@
               ],
               "src": "3864:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "3796:103:8",
             "stateMutability": "view",
-            "superFunction": 2559,
+            "superFunction": 2647,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2426,
+              "id": 2514,
               "nodeType": "Block",
               "src": "4146:28:8",
               "statements": [
@@ -1858,7 +1858,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2424,
+                    "id": 2512,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1873,30 +1873,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2423,
-                  "id": 2425,
+                  "functionReturnParameters": 2511,
+                  "id": 2513,
                   "nodeType": "Return",
                   "src": "4156:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if account is a technician\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2427,
+            "id": 2515,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isTechnician",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2420,
+              "id": 2508,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2419,
+                  "id": 2507,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2427,
+                  "scope": 2515,
                   "src": "4092:23:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1905,7 +1905,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2418,
+                    "id": 2506,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4092:7:8",
@@ -1922,15 +1922,15 @@
               "src": "4091:25:8"
             },
             "returnParameters": {
-              "id": 2423,
+              "id": 2511,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2422,
+                  "id": 2510,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2427,
+                  "scope": 2515,
                   "src": "4140:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1939,7 +1939,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2421,
+                    "id": 2509,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4140:4:8",
@@ -1954,15 +1954,15 @@
               ],
               "src": "4139:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "4070:104:8",
             "stateMutability": "view",
-            "superFunction": 2566,
+            "superFunction": 2654,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2436,
+              "id": 2524,
               "nodeType": "Block",
               "src": "4413:28:8",
               "statements": [
@@ -1970,7 +1970,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2434,
+                    "id": 2522,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1985,30 +1985,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2433,
-                  "id": 2435,
+                  "functionReturnParameters": 2521,
+                  "id": 2523,
                   "nodeType": "Return",
                   "src": "4423:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if account is a taster\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2437,
+            "id": 2525,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isTaster",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2430,
+              "id": 2518,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2429,
+                  "id": 2517,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2437,
+                  "scope": 2525,
                   "src": "4359:23:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2017,7 +2017,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2428,
+                    "id": 2516,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4359:7:8",
@@ -2034,15 +2034,15 @@
               "src": "4358:25:8"
             },
             "returnParameters": {
-              "id": 2433,
+              "id": 2521,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2432,
+                  "id": 2520,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2437,
+                  "scope": 2525,
                   "src": "4407:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2051,7 +2051,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2431,
+                    "id": 2519,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4407:4:8",
@@ -2066,15 +2066,15 @@
               ],
               "src": "4406:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "4341:100:8",
             "stateMutability": "view",
-            "superFunction": 2573,
+            "superFunction": 2661,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2446,
+              "id": 2534,
               "nodeType": "Block",
               "src": "4686:28:8",
               "statements": [
@@ -2082,7 +2082,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2444,
+                    "id": 2532,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2097,30 +2097,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2443,
-                  "id": 2445,
+                  "functionReturnParameters": 2531,
+                  "id": 2533,
                   "nodeType": "Return",
                   "src": "4696:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if account is a validator\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2447,
+            "id": 2535,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isValidator",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2440,
+              "id": 2528,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2439,
+                  "id": 2527,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2447,
+                  "scope": 2535,
                   "src": "4632:23:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2129,7 +2129,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2438,
+                    "id": 2526,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4632:7:8",
@@ -2146,15 +2146,15 @@
               "src": "4631:25:8"
             },
             "returnParameters": {
-              "id": 2443,
+              "id": 2531,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2442,
+                  "id": 2530,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2447,
+                  "scope": 2535,
                   "src": "4680:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2163,7 +2163,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2441,
+                    "id": 2529,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4680:4:8",
@@ -2178,15 +2178,15 @@
               ],
               "src": "4679:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "4611:103:8",
             "stateMutability": "view",
-            "superFunction": 2580,
+            "superFunction": 2668,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2456,
+              "id": 2544,
               "nodeType": "Block",
               "src": "4955:28:8",
               "statements": [
@@ -2194,7 +2194,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2454,
+                    "id": 2542,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2209,30 +2209,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2453,
-                  "id": 2455,
+                  "functionReturnParameters": 2541,
+                  "id": 2543,
                   "nodeType": "Return",
                   "src": "4965:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if account is a benefit\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2457,
+            "id": 2545,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isBenefit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2450,
+              "id": 2538,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2449,
+                  "id": 2537,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2457,
+                  "scope": 2545,
                   "src": "4901:23:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2241,7 +2241,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2448,
+                    "id": 2536,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4901:7:8",
@@ -2258,15 +2258,15 @@
               "src": "4900:25:8"
             },
             "returnParameters": {
-              "id": 2453,
+              "id": 2541,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2452,
+                  "id": 2540,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2457,
+                  "scope": 2545,
                   "src": "4949:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2275,7 +2275,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2451,
+                    "id": 2539,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4949:4:8",
@@ -2290,15 +2290,15 @@
               ],
               "src": "4948:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "4882:101:8",
             "stateMutability": "view",
-            "superFunction": 2587,
+            "superFunction": 2675,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2466,
+              "id": 2554,
               "nodeType": "Block",
               "src": "5224:28:8",
               "statements": [
@@ -2306,7 +2306,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2464,
+                    "id": 2552,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2321,30 +2321,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2463,
-                  "id": 2465,
+                  "functionReturnParameters": 2551,
+                  "id": 2553,
                   "nodeType": "Return",
                   "src": "5234:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if account is a roaster\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2467,
+            "id": 2555,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isRoaster",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2460,
+              "id": 2548,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2459,
+                  "id": 2547,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2467,
+                  "scope": 2555,
                   "src": "5170:23:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2353,7 +2353,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2458,
+                    "id": 2546,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "5170:7:8",
@@ -2370,15 +2370,15 @@
               "src": "5169:25:8"
             },
             "returnParameters": {
-              "id": 2463,
+              "id": 2551,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2462,
+                  "id": 2550,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2467,
+                  "scope": 2555,
                   "src": "5218:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2387,7 +2387,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2461,
+                    "id": 2549,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "5218:4:8",
@@ -2402,14 +2402,14 @@
               ],
               "src": "5217:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "5151:101:8",
             "stateMutability": "view",
-            "superFunction": 2594,
+            "superFunction": 2682,
             "visibility": "external"
           }
         ],
-        "scope": 2469,
+        "scope": 2557,
         "src": "60:5194:8"
       }
     ],
@@ -2419,14 +2419,14 @@
     "absolutePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/StubActorFactory.sol",
     "exportedSymbols": {
       "StubActorFactory": [
-        2468
+        2556
       ]
     },
-    "id": 2469,
+    "id": 2557,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2294,
+        "id": 2382,
         "literals": [
           "solidity",
           "^",
@@ -2439,10 +2439,10 @@
       {
         "absolutePath": "/Users/oscarr/Ethereum/wrapped_coffee_coin/contracts/interfaces/IActor.sol",
         "file": "./interfaces/IActor.sol",
-        "id": 2295,
+        "id": 2383,
         "nodeType": "ImportDirective",
-        "scope": 2469,
-        "sourceUnit": 2638,
+        "scope": 2557,
+        "sourceUnit": 2726,
         "src": "25:33:8",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2453,38 +2453,38 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 2296,
+              "id": 2384,
               "name": "IActor",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2637,
+              "referencedDeclaration": 2725,
               "src": "89:6:8",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IActor_$2637",
+                "typeIdentifier": "t_contract$_IActor_$2725",
                 "typeString": "contract IActor"
               }
             },
-            "id": 2297,
+            "id": 2385,
             "nodeType": "InheritanceSpecifier",
             "src": "89:6:8"
           }
         ],
         "contractDependencies": [
-          2637
+          2725
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2468,
+        "id": 2556,
         "linearizedBaseContracts": [
-          2468,
-          2637
+          2556,
+          2725
         ],
         "name": "StubActorFactory",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2306,
+              "id": 2394,
               "nodeType": "Block",
               "src": "364:32:8",
               "statements": [
@@ -2492,7 +2492,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "4641524d4552",
-                    "id": 2304,
+                    "id": 2392,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2507,30 +2507,30 @@
                     },
                     "value": "FARMER"
                   },
-                  "functionReturnParameters": 2303,
-                  "id": 2305,
+                  "functionReturnParameters": 2391,
+                  "id": 2393,
                   "nodeType": "Return",
                   "src": "374:15:8"
                 }
               ]
             },
             "documentation": "@notice Gets the type of the account.\n@param _owner address of the owner.\n@return returns a bytes32 with the type of account or empty if there is no account",
-            "id": 2307,
+            "id": 2395,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getAccountType",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2300,
+              "id": 2388,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2299,
+                  "id": 2387,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2307,
+                  "scope": 2395,
                   "src": "316:14:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2539,7 +2539,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2298,
+                    "id": 2386,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "316:7:8",
@@ -2556,15 +2556,15 @@
               "src": "315:16:8"
             },
             "returnParameters": {
-              "id": 2303,
+              "id": 2391,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2302,
+                  "id": 2390,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2307,
+                  "scope": 2395,
                   "src": "355:7:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2573,7 +2573,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2301,
+                    "id": 2389,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "355:7:8",
@@ -2588,15 +2588,15 @@
               ],
               "src": "354:9:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "292:104:8",
             "stateMutability": "view",
-            "superFunction": 2477,
+            "superFunction": 2565,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2314,
+              "id": 2402,
               "nodeType": "Block",
               "src": "612:37:8",
               "statements": [
@@ -2604,7 +2604,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "434f4f5045524154495645",
-                    "id": 2312,
+                    "id": 2400,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2619,36 +2619,36 @@
                     },
                     "value": "COOPERATIVE"
                   },
-                  "functionReturnParameters": 2311,
-                  "id": 2313,
+                  "functionReturnParameters": 2399,
+                  "id": 2401,
                   "nodeType": "Return",
                   "src": "622:20:8"
                 }
               ]
             },
             "documentation": "@notice Gets the type of the sender account.\n@return returns a bytes32 with the type of account or empty if there is no account",
-            "id": 2315,
+            "id": 2403,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getSenderRole",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2308,
+              "id": 2396,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "577:2:8"
             },
             "returnParameters": {
-              "id": 2311,
+              "id": 2399,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2310,
+                  "id": 2398,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2315,
+                  "scope": 2403,
                   "src": "603:7:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2657,7 +2657,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2309,
+                    "id": 2397,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "603:7:8",
@@ -2672,15 +2672,15 @@
               ],
               "src": "602:9:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "555:94:8",
             "stateMutability": "view",
-            "superFunction": 2482,
+            "superFunction": 2570,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2324,
+              "id": 2412,
               "nodeType": "Block",
               "src": "880:28:8",
               "statements": [
@@ -2688,7 +2688,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2322,
+                    "id": 2410,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2703,30 +2703,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2321,
-                  "id": 2323,
+                  "functionReturnParameters": 2409,
+                  "id": 2411,
                   "nodeType": "Return",
                   "src": "890:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if an actor exists\n@param _actorAddress address of actor to check\n@return true if is exists false if not",
-            "id": 2325,
+            "id": 2413,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "actorExists",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2318,
+              "id": 2406,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2317,
+                  "id": 2405,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2325,
+                  "scope": 2413,
                   "src": "829:21:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2735,7 +2735,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2316,
+                    "id": 2404,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "829:7:8",
@@ -2752,15 +2752,15 @@
               "src": "828:23:8"
             },
             "returnParameters": {
-              "id": 2321,
+              "id": 2409,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2320,
+                  "id": 2408,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2325,
+                  "scope": 2413,
                   "src": "874:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2769,7 +2769,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2319,
+                    "id": 2407,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "874:4:8",
@@ -2784,15 +2784,15 @@
               ],
               "src": "873:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "808:100:8",
             "stateMutability": "view",
-            "superFunction": 2489,
+            "superFunction": 2577,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2336,
+              "id": 2424,
               "nodeType": "Block",
               "src": "1269:28:8",
               "statements": [
@@ -2800,7 +2800,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2334,
+                    "id": 2422,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2815,30 +2815,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2333,
-                  "id": 2335,
+                  "functionReturnParameters": 2421,
+                  "id": 2423,
                   "nodeType": "Return",
                   "src": "1279:11:8"
                 }
               ]
             },
             "documentation": "@notice Checks if a user has permission from another user.\n@param _allower address of the allower.\n@param _allowed address of the actor to check if has permission.\n@return returns true if _allowed has permission, false otherwise.",
-            "id": 2337,
+            "id": 2425,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isAllowed",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2330,
+              "id": 2418,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2327,
+                  "id": 2415,
                   "name": "_allower",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2337,
+                  "scope": 2425,
                   "src": "1204:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2847,7 +2847,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2326,
+                    "id": 2414,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1204:7:8",
@@ -2862,10 +2862,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2329,
+                  "id": 2417,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2337,
+                  "scope": 2425,
                   "src": "1222:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2874,7 +2874,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2328,
+                    "id": 2416,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1222:7:8",
@@ -2891,15 +2891,15 @@
               "src": "1203:36:8"
             },
             "returnParameters": {
-              "id": 2333,
+              "id": 2421,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2332,
+                  "id": 2420,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2337,
+                  "scope": 2425,
                   "src": "1263:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2908,7 +2908,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2331,
+                    "id": 2419,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1263:4:8",
@@ -2923,36 +2923,36 @@
               ],
               "src": "1262:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "1185:112:8",
             "stateMutability": "view",
-            "superFunction": 2498,
+            "superFunction": 2586,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2342,
+              "id": 2430,
               "nodeType": "Block",
               "src": "1453:24:8",
               "statements": []
             },
             "documentation": "@notice creates a new actor from sender\n@param _role type of account of the actor.",
-            "id": 2343,
+            "id": 2431,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "addActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2340,
+              "id": 2428,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2339,
+                  "id": 2427,
                   "name": "_role",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2343,
+                  "scope": 2431,
                   "src": "1429:13:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2961,7 +2961,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2338,
+                    "id": 2426,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1429:7:8",
@@ -2977,41 +2977,41 @@
               "src": "1428:15:8"
             },
             "returnParameters": {
-              "id": 2341,
+              "id": 2429,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1453:0:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "1411:66:8",
             "stateMutability": "nonpayable",
-            "superFunction": 2503,
+            "superFunction": 2591,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2350,
+              "id": 2438,
               "nodeType": "Block",
               "src": "1790:8:8",
               "statements": []
             },
             "documentation": "@notice Cooperative creates new actor\n@param _role type of account of the actor.\n@param _actorAddress address of the actor.\n@dev Only Cooperatives can call this method",
-            "id": 2351,
+            "id": 2439,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "cooperativeAddActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2348,
+              "id": 2436,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2345,
+                  "id": 2433,
                   "name": "_role",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2351,
+                  "scope": 2439,
                   "src": "1730:13:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3020,7 +3020,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2344,
+                    "id": 2432,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1730:7:8",
@@ -3034,10 +3034,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2347,
+                  "id": 2435,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2351,
+                  "scope": 2439,
                   "src": "1753:21:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3046,7 +3046,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2346,
+                    "id": 2434,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1753:7:8",
@@ -3063,20 +3063,20 @@
               "src": "1720:60:8"
             },
             "returnParameters": {
-              "id": 2349,
+              "id": 2437,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1790:0:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "1692:106:8",
             "stateMutability": "nonpayable",
-            "superFunction": 2510,
+            "superFunction": 2598,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2362,
+              "id": 2450,
               "nodeType": "Block",
               "src": "2057:28:8",
               "statements": [
@@ -3084,7 +3084,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2360,
+                    "id": 2448,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -3099,30 +3099,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2359,
-                  "id": 2361,
+                  "functionReturnParameters": 2447,
+                  "id": 2449,
                   "nodeType": "Return",
                   "src": "2067:11:8"
                 }
               ]
             },
             "documentation": "@notice approves actor\n@param _allowed address of actor to assign the permission.\n@param _value value to be set.\n@return true if is success",
-            "id": 2363,
+            "id": 2451,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "approve",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2356,
+              "id": 2444,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2353,
+                  "id": 2441,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2363,
+                  "scope": 2451,
                   "src": "2002:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3131,7 +3131,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2352,
+                    "id": 2440,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2002:7:8",
@@ -3146,10 +3146,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2355,
+                  "id": 2443,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2363,
+                  "scope": 2451,
                   "src": "2020:11:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3158,7 +3158,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2354,
+                    "id": 2442,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2020:4:8",
@@ -3174,15 +3174,15 @@
               "src": "2001:31:8"
             },
             "returnParameters": {
-              "id": 2359,
+              "id": 2447,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2358,
+                  "id": 2446,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2363,
+                  "scope": 2451,
                   "src": "2051:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3191,7 +3191,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2357,
+                    "id": 2445,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2051:4:8",
@@ -3206,15 +3206,15 @@
               ],
               "src": "2050:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "1985:100:8",
             "stateMutability": "nonpayable",
-            "superFunction": 2519,
+            "superFunction": 2607,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2376,
+              "id": 2464,
               "nodeType": "Block",
               "src": "2510:28:8",
               "statements": [
@@ -3222,7 +3222,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2374,
+                    "id": 2462,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -3237,30 +3237,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2373,
-                  "id": 2375,
+                  "functionReturnParameters": 2461,
+                  "id": 2463,
                   "nodeType": "Return",
                   "src": "2520:11:8"
                 }
               ]
             },
             "documentation": "@notice approves actor from cooperative\n@param _allower address of actor to giving the permission.\n@param _allowed address of actor to assign the permission.\n@param _value value to be set.\n@return true if is success\n@dev Only Cooperatives can call this method",
-            "id": 2377,
+            "id": 2465,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "cooperativeApprove",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2370,
+              "id": 2458,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2365,
+                  "id": 2453,
                   "name": "_allower",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2377,
+                  "scope": 2465,
                   "src": "2436:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3269,7 +3269,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2364,
+                    "id": 2452,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2436:7:8",
@@ -3284,10 +3284,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2367,
+                  "id": 2455,
                   "name": "_allowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2377,
+                  "scope": 2465,
                   "src": "2454:16:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3296,7 +3296,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2366,
+                    "id": 2454,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2454:7:8",
@@ -3311,10 +3311,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2369,
+                  "id": 2457,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2377,
+                  "scope": 2465,
                   "src": "2472:11:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3323,7 +3323,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2368,
+                    "id": 2456,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2472:4:8",
@@ -3339,15 +3339,15 @@
               "src": "2435:49:8"
             },
             "returnParameters": {
-              "id": 2373,
+              "id": 2461,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2372,
+                  "id": 2460,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2377,
+                  "scope": 2465,
                   "src": "2504:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3356,7 +3356,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2371,
+                    "id": 2459,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2504:4:8",
@@ -3371,68 +3371,68 @@
               ],
               "src": "2503:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "2408:130:8",
             "stateMutability": "nonpayable",
-            "superFunction": 2530,
+            "superFunction": 2618,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2380,
+              "id": 2468,
               "nodeType": "Block",
               "src": "2664:2:8",
               "statements": []
             },
             "documentation": "@notice destroys an actor\n@dev only actor can destroy account",
-            "id": 2381,
+            "id": 2469,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "destroyActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2378,
+              "id": 2466,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2652:2:8"
             },
             "returnParameters": {
-              "id": 2379,
+              "id": 2467,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2664:0:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "2631:35:8",
             "stateMutability": "nonpayable",
-            "superFunction": 2533,
+            "superFunction": 2621,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2386,
+              "id": 2474,
               "nodeType": "Block",
               "src": "2927:2:8",
               "statements": []
             },
             "documentation": "@notice destroys an actor\n@param _actorAddress address of the actor.\n@dev Only Cooperatives can call this method\n@dev only actor can destroy account",
-            "id": 2387,
+            "id": 2475,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "cooperativeDestroyActor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2384,
+              "id": 2472,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2383,
+                  "id": 2471,
                   "name": "_actorAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2387,
+                  "scope": 2475,
                   "src": "2895:21:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3441,7 +3441,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2382,
+                    "id": 2470,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2895:7:8",
@@ -3458,20 +3458,20 @@
               "src": "2894:23:8"
             },
             "returnParameters": {
-              "id": 2385,
+              "id": 2473,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2927:0:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "2862:67:8",
             "stateMutability": "nonpayable",
-            "superFunction": 2538,
+            "superFunction": 2626,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2396,
+              "id": 2484,
               "nodeType": "Block",
               "src": "3262:28:8",
               "statements": [
@@ -3479,7 +3479,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2394,
+                    "id": 2482,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -3494,30 +3494,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2393,
-                  "id": 2395,
+                  "functionReturnParameters": 2481,
+                  "id": 2483,
                   "nodeType": "Return",
                   "src": "3272:11:8"
                 }
               ]
             },
             "documentation": "@notice Returns true if the address passed to it belongs to a cooperative account\n@param _cooperative The address to be checked\n@return true if the address passed to the function belongs to a cooperative false otherwise",
-            "id": 2397,
+            "id": 2485,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isCooperative",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2390,
+              "id": 2478,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2389,
+                  "id": 2477,
                   "name": "_cooperative",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2397,
+                  "scope": 2485,
                   "src": "3211:20:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3526,7 +3526,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2388,
+                    "id": 2476,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3211:7:8",
@@ -3543,15 +3543,15 @@
               "src": "3210:22:8"
             },
             "returnParameters": {
-              "id": 2393,
+              "id": 2481,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2392,
+                  "id": 2480,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2397,
+                  "scope": 2485,
                   "src": "3256:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3560,7 +3560,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2391,
+                    "id": 2479,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "3256:4:8",
@@ -3575,15 +3575,15 @@
               ],
               "src": "3255:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "3188:102:8",
             "stateMutability": "view",
-            "superFunction": 2545,
+            "superFunction": 2633,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2406,
+              "id": 2494,
               "nodeType": "Block",
               "src": "3598:28:8",
               "statements": [
@@ -3591,7 +3591,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2404,
+                    "id": 2492,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -3606,30 +3606,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2403,
-                  "id": 2405,
+                  "functionReturnParameters": 2491,
+                  "id": 2493,
                   "nodeType": "Return",
                   "src": "3608:11:8"
                 }
               ]
             },
             "documentation": "@notice Returns true if the address passed to it belongs to a farmer account\n@param _farmer The address to be checked\n@return true if the address passed to the function belongs to a farmer false otherwise",
-            "id": 2407,
+            "id": 2495,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isFarmer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2400,
+              "id": 2488,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2399,
+                  "id": 2487,
                   "name": "_farmer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2407,
+                  "scope": 2495,
                   "src": "3552:15:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3638,7 +3638,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2398,
+                    "id": 2486,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3552:7:8",
@@ -3655,15 +3655,15 @@
               "src": "3551:17:8"
             },
             "returnParameters": {
-              "id": 2403,
+              "id": 2491,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2402,
+                  "id": 2490,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2407,
+                  "scope": 2495,
                   "src": "3592:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3672,7 +3672,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2401,
+                    "id": 2489,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "3592:4:8",
@@ -3687,15 +3687,15 @@
               ],
               "src": "3591:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "3534:92:8",
             "stateMutability": "view",
-            "superFunction": 2552,
+            "superFunction": 2640,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2416,
+              "id": 2504,
               "nodeType": "Block",
               "src": "3871:28:8",
               "statements": [
@@ -3703,7 +3703,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2414,
+                    "id": 2502,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -3718,30 +3718,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2413,
-                  "id": 2415,
+                  "functionReturnParameters": 2501,
+                  "id": 2503,
                   "nodeType": "Return",
                   "src": "3881:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if account is a certifier\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2417,
+            "id": 2505,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isCertifier",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2410,
+              "id": 2498,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2409,
+                  "id": 2497,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2417,
+                  "scope": 2505,
                   "src": "3817:23:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3750,7 +3750,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2408,
+                    "id": 2496,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "3817:7:8",
@@ -3767,15 +3767,15 @@
               "src": "3816:25:8"
             },
             "returnParameters": {
-              "id": 2413,
+              "id": 2501,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2412,
+                  "id": 2500,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2417,
+                  "scope": 2505,
                   "src": "3865:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3784,7 +3784,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2411,
+                    "id": 2499,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "3865:4:8",
@@ -3799,15 +3799,15 @@
               ],
               "src": "3864:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "3796:103:8",
             "stateMutability": "view",
-            "superFunction": 2559,
+            "superFunction": 2647,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2426,
+              "id": 2514,
               "nodeType": "Block",
               "src": "4146:28:8",
               "statements": [
@@ -3815,7 +3815,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2424,
+                    "id": 2512,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -3830,30 +3830,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2423,
-                  "id": 2425,
+                  "functionReturnParameters": 2511,
+                  "id": 2513,
                   "nodeType": "Return",
                   "src": "4156:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if account is a technician\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2427,
+            "id": 2515,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isTechnician",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2420,
+              "id": 2508,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2419,
+                  "id": 2507,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2427,
+                  "scope": 2515,
                   "src": "4092:23:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3862,7 +3862,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2418,
+                    "id": 2506,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4092:7:8",
@@ -3879,15 +3879,15 @@
               "src": "4091:25:8"
             },
             "returnParameters": {
-              "id": 2423,
+              "id": 2511,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2422,
+                  "id": 2510,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2427,
+                  "scope": 2515,
                   "src": "4140:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3896,7 +3896,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2421,
+                    "id": 2509,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4140:4:8",
@@ -3911,15 +3911,15 @@
               ],
               "src": "4139:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "4070:104:8",
             "stateMutability": "view",
-            "superFunction": 2566,
+            "superFunction": 2654,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2436,
+              "id": 2524,
               "nodeType": "Block",
               "src": "4413:28:8",
               "statements": [
@@ -3927,7 +3927,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2434,
+                    "id": 2522,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -3942,30 +3942,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2433,
-                  "id": 2435,
+                  "functionReturnParameters": 2521,
+                  "id": 2523,
                   "nodeType": "Return",
                   "src": "4423:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if account is a taster\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2437,
+            "id": 2525,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isTaster",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2430,
+              "id": 2518,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2429,
+                  "id": 2517,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2437,
+                  "scope": 2525,
                   "src": "4359:23:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3974,7 +3974,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2428,
+                    "id": 2516,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4359:7:8",
@@ -3991,15 +3991,15 @@
               "src": "4358:25:8"
             },
             "returnParameters": {
-              "id": 2433,
+              "id": 2521,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2432,
+                  "id": 2520,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2437,
+                  "scope": 2525,
                   "src": "4407:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4008,7 +4008,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2431,
+                    "id": 2519,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4407:4:8",
@@ -4023,15 +4023,15 @@
               ],
               "src": "4406:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "4341:100:8",
             "stateMutability": "view",
-            "superFunction": 2573,
+            "superFunction": 2661,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2446,
+              "id": 2534,
               "nodeType": "Block",
               "src": "4686:28:8",
               "statements": [
@@ -4039,7 +4039,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2444,
+                    "id": 2532,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -4054,30 +4054,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2443,
-                  "id": 2445,
+                  "functionReturnParameters": 2531,
+                  "id": 2533,
                   "nodeType": "Return",
                   "src": "4696:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if account is a validator\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2447,
+            "id": 2535,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isValidator",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2440,
+              "id": 2528,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2439,
+                  "id": 2527,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2447,
+                  "scope": 2535,
                   "src": "4632:23:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4086,7 +4086,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2438,
+                    "id": 2526,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4632:7:8",
@@ -4103,15 +4103,15 @@
               "src": "4631:25:8"
             },
             "returnParameters": {
-              "id": 2443,
+              "id": 2531,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2442,
+                  "id": 2530,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2447,
+                  "scope": 2535,
                   "src": "4680:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4120,7 +4120,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2441,
+                    "id": 2529,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4680:4:8",
@@ -4135,15 +4135,15 @@
               ],
               "src": "4679:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "4611:103:8",
             "stateMutability": "view",
-            "superFunction": 2580,
+            "superFunction": 2668,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2456,
+              "id": 2544,
               "nodeType": "Block",
               "src": "4955:28:8",
               "statements": [
@@ -4151,7 +4151,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2454,
+                    "id": 2542,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -4166,30 +4166,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2453,
-                  "id": 2455,
+                  "functionReturnParameters": 2541,
+                  "id": 2543,
                   "nodeType": "Return",
                   "src": "4965:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if account is a benefit\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2457,
+            "id": 2545,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isBenefit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2450,
+              "id": 2538,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2449,
+                  "id": 2537,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2457,
+                  "scope": 2545,
                   "src": "4901:23:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4198,7 +4198,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2448,
+                    "id": 2536,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "4901:7:8",
@@ -4215,15 +4215,15 @@
               "src": "4900:25:8"
             },
             "returnParameters": {
-              "id": 2453,
+              "id": 2541,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2452,
+                  "id": 2540,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2457,
+                  "scope": 2545,
                   "src": "4949:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4232,7 +4232,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2451,
+                    "id": 2539,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "4949:4:8",
@@ -4247,15 +4247,15 @@
               ],
               "src": "4948:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "4882:101:8",
             "stateMutability": "view",
-            "superFunction": 2587,
+            "superFunction": 2675,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 2466,
+              "id": 2554,
               "nodeType": "Block",
               "src": "5224:28:8",
               "statements": [
@@ -4263,7 +4263,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 2464,
+                    "id": 2552,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -4278,30 +4278,30 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 2463,
-                  "id": 2465,
+                  "functionReturnParameters": 2551,
+                  "id": 2553,
                   "nodeType": "Return",
                   "src": "5234:11:8"
                 }
               ]
             },
             "documentation": "@notice checks if account is a roaster\n@param _accountAddress address of account to check\n@return true if is exists false if not",
-            "id": 2467,
+            "id": 2555,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isRoaster",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2460,
+              "id": 2548,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2459,
+                  "id": 2547,
                   "name": "_accountAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2467,
+                  "scope": 2555,
                   "src": "5170:23:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4310,7 +4310,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2458,
+                    "id": 2546,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "5170:7:8",
@@ -4327,15 +4327,15 @@
               "src": "5169:25:8"
             },
             "returnParameters": {
-              "id": 2463,
+              "id": 2551,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2462,
+                  "id": 2550,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2467,
+                  "scope": 2555,
                   "src": "5218:4:8",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4344,7 +4344,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 2461,
+                    "id": 2549,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "5218:4:8",
@@ -4359,14 +4359,14 @@
               ],
               "src": "5217:6:8"
             },
-            "scope": 2468,
+            "scope": 2556,
             "src": "5151:101:8",
             "stateMutability": "view",
-            "superFunction": 2594,
+            "superFunction": 2682,
             "visibility": "external"
           }
         ],
-        "scope": 2469,
+        "scope": 2557,
         "src": "60:5194:8"
       }
     ],
@@ -4509,7 +4509,7 @@
     }
   },
   "schemaVersion": "3.0.14",
-  "updatedAt": "2019-09-08T00:21:07.093Z",
+  "updatedAt": "2019-09-09T01:56:30.896Z",
   "devdoc": {
     "methods": {
       "actorExists(address)": {
