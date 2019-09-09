@@ -55,7 +55,8 @@ class TokensDashboard extends React.Component {
             const amount = event.returnValues['_value'];
 
             let { unapprovedTokens, approvedTokens } = tokens;
-
+            console.log(JSON.stringify(balances));
+            
             let indexOfToken = approvedTokens.findIndex((element) => element['id'] == tokenId);
             if (indexOfToken != -1) {
                 const newValue = balances[indexOfToken].plus(amount);
@@ -64,7 +65,7 @@ class TokensDashboard extends React.Component {
 
             indexOfToken = unapprovedTokens.findIndex((element) => element['id'] == tokenId);
             if (indexOfToken != -1) {
-                balances.push(amount);
+                balances.push(new BigNumber(amount.toString()));
                 const token = unapprovedTokens[indexOfToken];
                 unapprovedTokens = unapprovedTokens.filter((e, index) => index != indexOfToken);
                 approvedTokens.push(token);
@@ -146,6 +147,7 @@ class TokensDashboard extends React.Component {
         const approvedTokenIds = await erc1155Contract.methods.getTokensWithBalance(accounts[0]).call({ from: accounts[0] });
         const approvedTokenPromises = approvedTokenIds.map((id) => erc1155Contract.methods.uris(id).call({ from: accounts[0] }));
         const ipfsHashes = await Promise.all(approvedTokenPromises);
+        console.log(JSON.stringify(ipfsHashes));
 
         const approvedTokenResponses = await Promise.all(
             ipfsHashes.map((ipfsHash) => axios.get(`${IPFS_GATEWAY_BASE}${ipfsHash}`))
@@ -159,6 +161,8 @@ class TokensDashboard extends React.Component {
         const unapprovedTokenPromises = unapprovedTokenIds.map((id) => erc1155Contract.methods.uris(id).call({ from: accounts[0] }));
         const unapprovedipfsHashes = await Promise.all(unapprovedTokenPromises);
 
+        console.log(JSON.stringify(unapprovedipfsHashes));
+
         const unapprovedTokenResponses = await Promise.all(
             unapprovedipfsHashes.map((ipfsHash) => axios.get(`${IPFS_GATEWAY_BASE}${ipfsHash}`))
         );
@@ -169,6 +173,7 @@ class TokensDashboard extends React.Component {
     render() {
         const { tokens, balances, showMortgageModal } = this.state;
         let content;
+    
         if (!tokens || !tokens.approvedTokens) {
             content = (<a>Loading tokens...</a>);
         } else if (tokens.approvedTokens.length == 0 && tokens.unapprovedTokens.length == 0) {
