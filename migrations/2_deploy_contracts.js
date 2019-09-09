@@ -12,7 +12,7 @@ module.exports = (deployer, network) => {
     deployer
       .deploy(actorFactory)
       .then(() => actorFactory.deployed())
-      .then(() => deployer.deploy(erc1155, actorFactory.address))
+      .then(() => deployer.deploy(ERC1155, actorFactory.address))
       .then((erc1155Instance) => deployer.deploy(AffogatoCoffeeHandler, erc1155Instance.address))
       .then((affogatoCoffeeHandlerInstance) => deployer.deploy(AffogatoStandardCoffee, affogatoCoffeeHandlerInstance.address))
   } else if (network === "rinkeby") {
