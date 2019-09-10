@@ -46,6 +46,7 @@ class App extends React.Component {
       const context = this;
       // Listen for changes on the accounts
       window.ethereum.on('accountsChanged', function (accounts) {
+        console.log(accounts);
         context.setState({ accounts });
       });
 
@@ -67,6 +68,7 @@ class App extends React.Component {
     if (!web3) {
       return <a>Loading...</a>
     }
+
     return <TokensDashboard standardToken={standardToken} web3={web3} erc1155Contract={erc1155Contract} accounts={accounts} affogatoTokenHandler={affogatoTokenHandler} />
   }
 }

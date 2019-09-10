@@ -148,7 +148,7 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants, Ownable
     }
 
     /**
-        @notice Returns an array containing all the ids of the tokens this address has a positive balance.
+        @notice Returns an array containing all the ids of the tokens this address has a positive balance and have been approved already.
         This is intended to be used to show al the tokens available for this address at once without maintaining the ids stored somewhere else.
         @dev Looking for better ways to do this, it can change in the future.
         @param _address The address to get the tokens
@@ -160,6 +160,31 @@ contract ERC1155 is IERC1155, ERC165, CommonConstants, Ownable
 
         for (uint256 i = 0; i <= nonce; i++) {
             if (balances[i][_address] > 0 && creationApprovals[i]) {
+                allTokens[tokenCount++] = i;
+            }
+        }
+
+        uint256[] memory tokenIds = new uint256[](tokenCount);
+        for (uint i = 0; i < tokenCount; i++) {
+            tokenIds[i] = allTokens[i];
+        }
+
+        return tokenIds;
+    }
+
+    /**
+        @notice Returns an array containing all the ids of the tokens this account has not yet approved.
+        This is intended to be used to show al the tokens available for this address at once without maintaining the ids stored somewhere else.
+        @dev Looking for better ways to do this, it can change in the future.
+        @param _address The address to get the tokens
+        @return An array containing the ids of the tokens yet to be approved.
+     */
+    function getUnapprovedTokensWithBalance(address _address) external view returns(uint256[] memory) {
+        uint256[] memory allTokens = new uint256[](nonce);
+        uint256 tokenCount = 0;
+
+        for (uint256 i = 0; i <= nonce; i++) {
+            if (balances[i][_address] > 0 && creationApprovals[i] == false) {
                 allTokens[tokenCount++] = i;
             }
         }
