@@ -1,3 +1,24 @@
+ul.nav {
+  border-bottom: 1px #e2e2e294 solid;
+  padding-bottom: 10px;
+}
+
+.bg-light {
+  background-color: white !important;
+  border-bottom: 1px #e2e2e294 solid;
+  padding-bottom: 10px;
+}
+
+ul svg {
+  float: left;
+}
+.nav-item {
+  min-width: 65px;
+}
+.break-word {
+  word-wrap: break-word;
+}
+
 .App {
   text-align: center;
 }
@@ -5,7 +26,6 @@
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
-  pointer-events: none;
 }
 
 .App-header {
@@ -20,9 +40,22 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #332211;
 }
 
+.btn-accent,
+.btn-accent:active {
+  color: #fff;
+  border-color: #332211 !important;
+  background-color: #332211 !important;
+  box-shadow: none;
+}
+.btn-accent:hover {
+  color: #fff;
+  border-color: #110b05 !important;
+  background-color: #110b05 !important;
+  box-shadow: none;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -30,4 +63,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  color: #332211;
+}
+
+ul.nav .logo {
+  width: 200px;
+}
+
+.account-info {
+  margin-top: -10px;
+}
+
+.balance {
+  min-width: 18%;
+}
+
+.card {
+  max-width: 20rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 50px;
 }

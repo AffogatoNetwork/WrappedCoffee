@@ -1,21 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+<html lang="en" class="no-js h-100">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-139684081-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="logo192.png" />
-  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+      gtag("config", "UA-139684081-1");
+    </script>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!--
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/img/icon.png" />
+
+    <link
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link href="%PUBLIC_URL%/css/style.css" rel="stylesheet" />
+    <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,13 +52,20 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>React App</title>
-</head>
-
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <!--
+    <!-- Start of affogato Zendesk Widget script -->
+    <script
+      id="ze-snippet"
+      src="https://static.zdassets.com/ekr/snippet.js?key=8d8b11af-ced8-4687-a2db-6ac125af21f7"
+    ></script>
+    <!-- End of affogato Zendesk Widget script -->
+    <title>Affogato</title>
+  </head>
+  <body class="h-100">
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root" class="container-fluid h-100"></div>
+    <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -40,6 +75,27 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-</body>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script src="https://unpkg.com/shards-ui@latest/dist/js/shards.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sharrre/2.0.1/jquery.sharrre.min.js"></script>
 
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </html>
